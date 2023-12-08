@@ -1,0 +1,4641 @@
+Design Document for the Component JV
+
+
+1	ACTIVITY:INTEGRATION ACTIVITY [INTEGRATIONACTIVITY]	8
+1.1	ILBO:INTEGRATION UI [INTEGRATIONUI]	8
+2	ACTIVITY:CONVERT MEMORANDUM VOUCHER [JVCONMEMVCHR]	8
+2.1	ILBO:SELECT MEMORANDUM VOUCHER [JVCONMEMVCHRENT]	8
+Task:Default Fetch [JvConMemVchrFth1]	8
+Task:Help on Account code [jvconmemvchrhlp1]	9
+Task:Initialize [JvConMemVchrIni1]	10
+Task:Search [JvConMemVchrTrn1]	11
+Task:Create Voucher [JvConMemVchrTrn2]	14
+Task:Create And Authorize Voucher [JvConMemVchrTrn4]	21
+Task:Bu header on enter [JvConMemVchrUI1]	27
+2.2	ILBO:CONVERT MEMORANDUM VOUCHER TO REGULAR VOUCHER [JVCONMEMVCHRMAIN]	29
+Task:Link to Collaborate [JOVmainsrCollabLk]	29
+Task:Help on Project / Sub-Project Code [JOVmainsrPrjSubHp]	30
+Task:On Enter of Project / Sub-Project Code [JOVmainsrPrjSubUi]	31
+Task:Link to Specify Dimensions [JOVmainsrSpecifLk]	32
+Task:Default Fetch [JvConMemVchrFth2]	33
+Task:Initialize [JvConMemVchrIni2]	37
+Task:Attach Notes [JvConMemVchrLnk4]	38
+Task:Create Voucher [JvConMemVchrTrn3]	39
+Task:Create And Authorize Voucher [JvConMemVchrTrn5]	47
+3	ACTIVITY:CREATE DISTRIBUTION SETUP [JVCRDNS]	55
+3.1	ILBO:CREATE DISTRIBUTION SETUP [JVCRDNSMAIN]	55
+Task:Default Fetch [JvCrDNSFth1]	55
+Task:Help on Account # [JvCrDNSHlp1]	56
+Task:Help on Cost Center [JvCrDNSHlp2]	57
+Task:Help on Analysis Code [JvCrDNSHlp3]	58
+Task:Initialize [JvCrDNSIni1]	58
+Task:Compute Total [JvCrDNSTrn1]	60
+Task:Create Distribution Setup [JvCrDNSTrn2]	65
+Task:Account code on enter [JvCrDNSUI1]	70
+Task:Transaction currency on enter [JvCrDNSUI2]	71
+4	ACTIVITY:CREATE RECURRING VOUCHER TEMPLATE [JVCRRECTEMP]	73
+4.1	ILBO:CREATE RECURRING VOUCHER TEMPLATE [JVCRRECTEMPMAIN]	73
+Task:Tax Calculation - Summary [G1JvCrRecTempLnk1]	73
+Task:Link to Collaborate [JOVmainsnCollabLk]	74
+Task:Help on Cost Center [JOVmainsnCostCeHp]	75
+Task:Help on Dest Acc Code [JOVmainsnDestAcHp]	75
+Task:Help on Dest Anal [JOVmainsnDestAnHp]	76
+Task:Help on Destination Cost Center [JOVmainsnDestCCHp]	77
+Task:Help on Dest Sub Anal [JOVmainsnDestSuHp]	78
+Task:Help on Project / Sub-Project Code [JOVmainsnPrjSubHp]	78
+Task:On Enter of Project / Sub-Project Code [JOVmainsnPrjSubUi]	79
+Task:On Select of Rec Vouc Cate [JOVmainsnRecVouUi]	80
+Task:Default Fetch [JvCrRecTempFth1]	82
+Task:Help on Account code [JvCrRecTempHlp2]	84
+Task:Help on Analysis Code [JvCrRecTempHlp3]	84
+Task:Initialize [JvCrRecTempIni1]	85
+Task:Attach Notes [JvCrRecTempLnk2]	89
+Task:Compute Total [JvCrRecTempTrn1]	90
+Task:Create Template [JvCrRecTempTrn2]	98
+Task:Get [JvCrRecTempTrn3]	109
+Task:Account code on enter [JvCrRecTempUI1]	117
+Task:Transaction currency on enter [JvCrRecTempUI3]	120
+5	ACTIVITY:EDIT DISTRIBUTION SETUP [JVEDDNS]	122
+5.1	ILBO:SELECT DISTRIBUTION SETUP[JVEDDNSENT] [JVEDDNSENT]	122
+Task:Default Fetch [JvEdDNSFth1]	122
+Task:Initialize [JvEdDNSIni1]	123
+Task:Search [JvEdDNSTrn1]	124
+Task:Delete Distribution Setup [JvEdDNSTrn2]	126
+Task:BU hdr on enter [JvEdDNSUI1]	130
+5.2	ILBO:EDIT DISTRIBUTION SETUP [JVEDDNSMAIN]	131
+Task:Default Fetch [JvEdDNSFth2]	131
+Task:Help on Account Code [JvEdDNSHlp1]	135
+Task:Help on Cost Center [JvEdDNSHlp2]	135
+Task:Help on Analysis Code [JvEdDNSHlp3]	136
+Task:Initialize [JvEdDNSIni2]	137
+Task:Compute Total [JvEdDNSTrn2a]	138
+Task:Edit Distribution Setup [JvEdDNSTrn4]	142
+Task:Delete Distribution Setup [JvEdDNSTrn5]	148
+Task:Account code on enter [JvEdDNSUI2]	153
+Task:Transaction currency on enter [JvEdDNSUI3]	155
+6	ACTIVITY:EDIT RECURRING VOUCHER TEMPLATE [JVEDRECTEMP]	156
+6.1	ILBO:SELECT RECURRING VOUCHER TEMPLATE[JVEDRECTEMPENT] [JVEDRECTEMPENT]	156
+Task:Default Fetch [JvEditRecTempFth1]	156
+Task:Help on Account code [JvEditRecTempHlp4]	157
+Task:Initialize [JvEditRecTempIni1]	158
+Task:Search [JvEditRecTempTrn1]	160
+Task:Delete Template [JvEditRecTempTrn2]	163
+6.2	ILBO:EDIT RECURRING VOUCHER TEMPLATE [JVEDRECTEMPMAIN]	169
+Task:Tax Calculation - Summary [G1JvEditRecTempLnk4]	169
+Task:Link to Collaborate [JOVmainenCollabLk]	170
+Task:Help on Dest Acc [JOVmainenDestAcHp]	171
+Task:Help on Destination Analysis Code [JOVmainenDestAnHp]	171
+Task:Help on Destination Cost Center [JOVmainenDestCCHp]	172
+Task:Help on Destination Sub Analysis Code [JOVmainenDestSuHp]	173
+Task:Help on Project / Sub-Project Code [JOVmainenPrjSubHp]	174
+Task:On Enter of Project / Sub-Project Code [JOVmainenPrjSubUi]	175
+Task:Default Fetch [JvEditRecTempFth2]	175
+Task:Help on Account code [JvEditRecTempHlp2]	182
+Task:Help on Analysis Code [JvEditRecTempHlp3]	183
+Task:Help on Cost center [JvEditRecTempHlp5]	183
+Task:Initialize [JvEditRecTempIni2]	184
+Task:Attach Notes [JvEditRecTempLnk6]	185
+Task:Get [JvEditRecTempTrn2a]	186
+Task:Compute Total [JvEditRecTempTrn4]	196
+Task:Edit Template [JvEditRecTempTrn5]	204
+Task:Delete Template [JvEditRecTempTrn6]	215
+Task:Account code on enter [JvEditRecTempUI1]	226
+Task:Transaction currency on enter [JvEditRecTempUI3]	228
+7	ACTIVITY:VIEW DISTRIBUTION SETUP [JVVWDNS]	231
+7.1	ILBO:SELECT DISTRIBUTION SETUP[JVVWDNSENT] [JVVWDNSENT]	231
+Task:Default Fetch [JvVwDNSFth1]	231
+Task:Initialize [JvVwDNSIni1]	232
+Task:Search [JvVwDNSTrn1]	233
+Task:BU hdr on enter [JvVwDNSUI1]	235
+7.2	ILBO:HELP ON DISTRIBUTION SETUP [JVVWDNSHLP]	236
+Task:Default Fetch [JvVwDNSFth3]	236
+Task:Search [JvVwDNSTrn2]	238
+7.3	ILBO:VIEW DISTRIBUTION SETUP [JVVWDNSMAIN]	240
+Task:Default Fetch [JvVwDNSFth2]	240
+8	ACTIVITY:VIEW GL VOUCHER FROM OTHER BFG [JVVWGLVCHR]	243
+8.1	ILBO:VIEW REFERENCE DOCUMENTS [JVVWGLREFDOC]	243
+Task:Default Fetch [JvVwGLvchrFth3]	243
+8.2	ILBO:SELECT GL VOUCHER [JVVWGLVCHRENT]	245
+Task:Default Fetch [JvVwGLvchrFth1]	245
+Task:Initialize [JvVwGLvchrIni1]	247
+Task:Search [JvVwGLvchrTrn1]	249
+Task:On enter of BFG [JvVwGLvchrUI1]	252
+8.3	ILBO:VIEW GL VOUCHER FROM OTHER BFG [JVVWGLVCHRMAIN]	254
+Task:Print Voucher [JOVmcreenPrintVTr]	254
+Task:Link to Update Dimensions [JOVmcreenUpdateLk]	255
+Task:Default Fetch [JvVwGLvchrFth2]	257
+9	ACTIVITY:VIEW RECURRING VOUCHER TEMPLATE [JVVWRECTEMP]	268
+9.1	ILBO:SELECT RECURRING VOUCHER TEMPLATE[JVVWRECTEMPENT] [JVVWRECTEMPENT]	268
+Task:Default Fetch [JvVwRecTempFth1]	268
+Task:Help on Account code [JvVwRecTempHlp1]	269
+Task:Initialize [JvVwRecTempIni1]	270
+Task:Search [JvVwRecTempTrn1]	272
+9.2	ILBO:HELP ON RECURRING VOUCHER TEMPLATE [JVVWRECTEMPHLP]	275
+Task:Default Fetch [JvVwRecTempFth3]	275
+Task:Help on Account code [JvVwRecTemphlp2]	277
+Task:Initialize [JvVwRecTempIni3]	277
+Task:Search [JvVwRecTempTrn3]	279
+9.3	ILBO:VIEW RECURRING VOUCHER TEMPLATE [JVVWRECTEMPMAIN]	282
+Task:Tax Calculation - Summary [G1JvVwRecTempLnk2]	282
+Task:Link to Collaborate [JOVmains3CollabLk]	283
+Task:Default Fetch [JvVwRecTempFth2]	284
+Task:Attach Notes [JvVwRecTempLnk5]	289
+9.4	ILBO:VIEW RECURRING VOUCHER STATUS [JVVWRECVSTAMAIN]	290
+Task:Default Fetch [JvVwRecVStaFth1]	290
+10	ACTIVITY:CREATE JOURNAL VOUCHER [JV_1ADDVCHR]	293
+10.1	ILBO:HELP ON JOURNAL VOUCHER [HELPONJOURNALVOUCHER]	293
+Task:Default Fetch [JOVmain23Fth]	293
+Task:Initialize [JOVmain23Init]	295
+Task:On Select of Ref Type [JOVmain23RefTypUi]	298
+Task:Search [JOVmain23JV_1VVTr]	301
+10.2	ILBO:ATTACH NOTES [JVATTNOTES]	304
+Task:Help on Standard Notes Id [JVAttNotesHlp1]	304
+Task:On enter of Standard Notes Id [JVAttNotesUI1]	304
+Task:Default Fetch [JV_1AddVchrFth2]	307
+Task:Save Std. Notes [JV_1AddVchrTrn3]	308
+Task:Attach Notes [JV_1AddVchrTrn4]	310
+10.3	ILBO:HELP ON STANDARD NOTES ID [JVHLPNOTES]	312
+10.4	ILBO:CREATE JOURNAL VOUCHER [JV_1ADDVCHRMAIN]	312
+Task:Tax Calculation - Summary [G1Jv_1AddvchrLnk1]	312
+Task:Link to Accounting Information [JOVmains7AccouiLk]	312
+Task:Help on Application No [JOVmains7ApplicHp]	313
+Task:Link to Collaborate [JOVmains7CollabLk]	314
+Task:Help on Copy From JVNo [JOVmains7CopyFrHp]	315
+Task:On Enter of Copy From JVNo [JOVmains7CopyFrUi]	316
+Task:Help on Dest Ana Code [JOVmains7DestAnHp]	339
+Task:Help on Dest CC [JOVmains7DestCCHp]	339
+Task:Help on Destination Acct Code [JOVmains7DestiaHp]	340
+Task:On Select of Destination Finance Book [JOVmains7DestinUi]	341
+Task:Help on Dest Prop No [JOVmains7DestPrHp]	342
+Task:On Enter of Transaction Date [JOVmains7FinTraUi]	343
+Task:Assign Sub Analysis code [JOVmains7Link_ALk]	347
+Task:Map Account Codes to Normal Cost Element [JOVmains7Link_CLk]	348
+Task:Maintain Posting Rule [JOVmains7Link_MLk]	348
+Task:Assign Analysis Code [JOVmains7Link_nLk]	349
+Task:Link to Map Normal All [JOVmains7MapNorLk]	350
+Task:Print Journal Voucher [JOVmains7PrintJTr]	351
+Task:Help on Project / Sub-Project Code [JOVmains7PrjSubHp]	352
+Task:On Enter of Project / Sub-Project Code [JOVmains7PrjSubUi]	353
+Task:Help on Proposal No [JOVmains7ProposHp]	354
+Task:Link to Specify Dimensions [JOVmains7SpecifLk]	355
+Task:Link to Specify Checklist [JOVmains7SpeciyLk]	356
+Task:Print Journal Voucher [JVAddVchrTrn6]	357
+Task:Default Fetch [JV_1AddVchrFth]	362
+Task:Help on Account code [Jv_1AddVchrHlp1]	366
+Task:Help on Analysis [Jv_1AddVchrHlp4]	366
+Task:Help on Cost Center [Jv_1AddVchrHlp6]	367
+Task:Initialize [JV_1AddVchrIni]	368
+Task:Attach Notes [JV_1AddVchrLink1]	373
+Task:Compute Totals [JV_1AddVchrTrn]	373
+Task:Create Voucher [JV_1AddVchrTrn1]	383
+Task:Create And Authorize Voucher [JV_1AddVchrTrn1a]	397
+Task:Get [JV_1AddVchrTrn2]	411
+Task:Vouchertype on enter [JV_1AddVchrUI1]	419
+Task:Reversal period on enter [JV_1AddVchrUI4]	426
+Task:Account code on enter [JV_1AddVchrUI5]	429
+Task:Transaction currency on enter [JV_1AddVchrUI7]	431
+10.5	ILBO:ACCOUNTING INFORMATION [JV_ACC_INFO]	433
+Task:Default Fetch [JOVmain22Fth]	433
+Task:Initialize [JOVmain22Init]	436
+Task:On Select of Trannumber [JOVmain22TranNuUi]	437
+11	ACTIVITY:AUTHORIZE JOURNAL VOUCHER [JV_1AUVCHR]	440
+11.1	ILBO:SELECT JOURNAL VOUCHER[JV_1AUVCHRENT] [JV_1AUVCHRENT]	440
+Task:Default Fetch [JV_1AuVchrFth]	440
+Task:Help on Account Code [Jv_1AuVchrhlp7]	442
+Task:Initialize [JV_1AuVchrIni]	442
+Task:Search [JV_1AuVchrTrn]	444
+Task:Authorize Voucher [JV_1AuVchrTrn1]	447
+Task:Return Voucher [Jv_1Auvchrtrn5]	455
+Task:BU header on enter [Jv_1AuVchrUI1]	462
+11.2	ILBO:AUTHORIZE JOURNAL VOUCHER [JV_1AUVCHRMAIN]	464
+Task:Tax Calculation - Summary [G1Jv_1AuVchrLnk1]	464
+Task:Link to Accounting Information [JOVmains9AccouiLk]	465
+Task:Help on Application No. [JOVmains9ApplicHp]	466
+Task:Link to Collaborate [JOVmains9CollabLk]	466
+Task:Help on Dest Ana Code [JOVmains9DestAnHp]	467
+Task:Help on Dest CC [JOVmains9DestCCHp]	468
+Task:Help on Destination Acct Code [JOVmains9DestiaHp]	469
+Task:On Select of Destination Finance Book [JOVmains9DestinUi]	469
+Task:Help on Dest Prop No [JOVmains9DestPrHp]	471
+Task:On Enter of Transaction Date [JOVmains9FinTraUi]	472
+Task:Print Journal Voucher [JOVmains9PrintJTr]	476
+Task:Help on Project / Sub-Project Code [JOVmains9PrjSubHp]	478
+Task:On Enter of Project / Sub-Project Code [JOVmains9PrjSubUi]	479
+Task:Help on Proposal No [JOVmains9ProposHp]	479
+Task:Link to Specify Dimensions [JOVmains9SpecifLk]	480
+Task:Link to Specify Checklist [JOVmains9SpeciyLk]	481
+Task:Default Fetch [JV_1AuVchrFth1]	482
+Task:Help on Account code [Jv_1AuVchrHlp2]	490
+Task:Help on Analysis code [Jv_1AuVchrHlp4]	491
+Task:Help on cost center [Jv_1AuVchrHlp9]	491
+Task:Initialize [Jv_1AuVchrIni2]	492
+Task:Attach Notes [Jv_1AuVchrLnk3]	495
+Task:Get [Jv_1AuVchrTrn2]	496
+Task:Compute Total [Jv_1AuVchrTrn2b]	504
+Task:Authorize Voucher [Jv_1AuVchrTrn3]	514
+Task:Return Voucher [Jv_1Auvchrtrn4]	528
+Task:Print Journal Voucher [JV_1AuVchrTrn6]	542
+Task:Account code on enter [Jv_1AuVchrUI15]	548
+Task:Transaction Currency On enter [Jv_1AuVchrUI16]	551
+Task:Reversal period on enter [Jv_1AuVchrUI8]	553
+12	ACTIVITY:SET FUNCTION PARAMETERS [JV_1MNTPPM]	556
+12.1	ILBO:SET FUNCTION PARAMETERS [JV_1MNTPPMMAIN]	556
+Task:Help on Usage ID [G1JV_1MntPPMHLP1]	556
+Task:Default Fetch [JV_1MntPPMFth]	556
+Task:Initialize [JV_1MntPPMIni]	558
+Task:Set [JV_1MntPPMTrn]	560
+13	ACTIVITY:EDIT JOURNAL VOUCHER [JV_1MODVCHR]	562
+13.1	ILBO:SELECT JOURNAL VOUCHER[JV_1MODVCHRENT] [JV_1MODVCHRENT]	562
+Task:Default Fetch [JV_1ModVchrFth]	562
+Task:Initialize [JV_1ModVchrIni]	564
+Task:Search [JV_1ModVchrTrn]	566
+Task:Delete Voucher [JV_1ModVchrTrn1]	570
+Task:BU hdr on enter [Jv_1ModVchrUI1]	577
+Task:Help on Account code [Jv_1ModvhcrHlp5]	579
+13.2	ILBO:EDIT JOURNAL VOUCHER [JV_1MODVCHRMAIN]	580
+Task:Tax Calculation - Summary [G1Jv_1ModVchrLnk1]	580
+Task:Link to Accounting Information [JOVmain12AccouiLk]	580
+Task:On Enter of Account Code [JOVmain12AccoutUi]	581
+Task:Help on Application No. [JOVmain12ApplicHp]	583
+Task:Link to Collaborate [JOVmain12CollabLk]	584
+Task:Help on Dest Ana Code [JOVmain12DestAnHp]	585
+Task:Help on Dest CC [JOVmain12DestCCHp]	586
+Task:Help on Destination Acct Code [JOVmain12DestiaHp]	586
+Task:On Select of Destination Finance Book [JOVmain12DestinUi]	587
+Task:Help on Dest Prop No [JOVmain12DestPrHp]	589
+Task:On Enter of Transaction Date [JOVmain12FinTraUi]	589
+Task:Print Journal Voucher [JOVmain12PrintJTr]	594
+Task:Help on Project / Sub-Project Code [JOVmain12PrjSubHp]	595
+Task:On Enter of Project / Sub-Project Code [JOVmain12PrjSubUi]	596
+Task:Help on Proposal No [JOVmain12ProposHp]	597
+Task:Link to Specify Dimensions [JOVmain12SpecifLk]	598
+Task:Link to Specify Checklist [JOVmain12SpeciyLk]	599
+Task:Default Fetch [JV_1ModVchrFth1]	600
+Task:Help on Account code [Jv_1ModVchrHlp2]	608
+Task:Help on Analysis code [Jv_1ModVchrHlp3]	609
+Task:Help on Cost center [Jv_1ModVchrHlp7]	609
+Task:Initialize [JV_1ModVchrIni1]	610
+Task:Attach Notes [Jv_1ModVchrLnk2]	613
+Task:Get [JV_1ModVchrTrn2]	614
+Task:Compute Totals [JV_1ModVchrTrn3]	626
+Task:Edit Voucher [JV_1ModVchrTrn4]	636
+Task:Delete Voucher [Jv_1ModVchrTrn5]	650
+Task:Edit And Authorize Voucher [Jv_1ModVchrTrn6]	664
+Task:Print Journal Voucher [Jv_1ModVchrTrn7]	678
+Task:Transaction currency on enter [Jv_1ModVchrUI16]	684
+Task:Reversal period on enter [Jv_1ModVchrUI8]	685
+14	ACTIVITY:REVERSE JOURNAL VOUCHER [JV_1REVVCHR]	688
+14.1	ILBO:SELECT JOURNAL VOUCHER[JV_1REVVCHRENT] [JV_1REVVCHRENT]	688
+Task:Default Fetch [JV_1RevVchrFth]	688
+Task:Help on Account code [Jv_1revvchrhlp1]	689
+Task:Initialize [JV_1RevVchrIni]	690
+Task:Search [JV_1RevVchrTrn]	692
+Task:BU header on enter [JV_1RevVchrUI1]	695
+14.2	ILBO:REVERSE JOURNAL VOUCHER [JV_1REVVCHRMAIN]	696
+Task:Link to Accounting Information [JOVmain14AccouiLk]	697
+Task:Link to Collaborate [JOVmain14CollabLk]	697
+Task:Default Fetch [JV_1RevVchrFth1]	698
+Task:Initialize [Jv_1RevVchrIni1]	704
+Task:Attach Notes [Jv_1RevVchrlnk2]	705
+Task:Reverse Voucher [JV_1RevVchrTrn1]	706
+15	ACTIVITY:VIEW FUNCTION PARAMETERS [JV_1VWPPM]	717
+15.1	ILBO:VIEW FUNCTION PARAMETERS [JV_1VWPPMMAIN]	717
+Task:Default Fetch [JV_1VwPPMFth]	717
+16	ACTIVITY:VIEW JOURNAL VOUCHER [JV_1VWVCHR]	718
+16.1	ILBO:VIEW NOTES [JVVWNOTES]	719
+16.2	ILBO:SELECT JOURNAL VOUCHER[JV_1VWVCHRENT] [JV_1VWVCHRENT]	719
+Task:Default Fetch [JV_1VwVchrFth]	719
+Task:Help on Account code [Jv_1VwVchrHlp1]	720
+Task:Initialize [JV_1VwVchrIni]	721
+Task:Search [JV_1VwVchrTrn]	723
+Task:BU header on enter [JV_1VwVchrUI1]	726
+16.3	ILBO:VIEW JOURNAL VOUCHER [JV_1VWVCHRMAIN]	728
+Task:Tax Calculation - Summary [G1Jv_1VwVchrLnk2]	728
+Task:Link to Accounting Information [JOVmain18AccouiLk]	728
+Task:Link to Collaborate [JOVmain18CollabLk]	729
+Task:Print Journal Voucher [JOVmain18PrintJTr]	730
+Task:Link to Specify Dimensions [JOVmain18SpecifLk]	732
+Task:Link to View Checklist [JOVmain18ViewChLk]	732
+Task:Default Fetch [JV_1VwVchrFth1]	733
+Task:Attach Notes [JV_1VwVchrLnk4]	741
+17	ACTIVITY:MAINTAIN JOURNAL VOUCHER [MAINTJV]	742
+17.1	ILBO:JOURNAL VOUCHER [MAINTJV]	742
+18	ACTIVITY:PROCESS POST DATED VOUCHERS [PROCESSPOSTVOUCHERS]	742
+18.1	ILBO:PROCESS POST DATED VOUCHERS [PROCESSVOUCHERS]	743
+Task:Default Fetch [JOVmain19Fth]	743
+Task:Get Details [JOVmain19GetDetTr]	744
+Task:Initialize [JOVmain19Init]	746
+Task:Process Vouchers1 [JOVmain19ProceVTr]	747
+18.2	ILBO:VIEW LOG FILE [VIEWLOGFILE]	752
+Task:Default Fetch [JOVmain20Fth]	752
+Task:Get Details [JOVmain20GetDetTr]	752
+
+
+1 Activity:Integration Activity [IntegrationActivity]
+
+1.1 ILBO:Integration UI [IntegrationUI]
+
+2 Activity:Convert Memorandum Voucher [JvConMemVchr]
+
+2.1 ILBO:Select Memorandum Voucher [JvConMemVchrEnt]
+
+Task:Default Fetch [JvConMemVchrFth1]
+      Implemented as Service:JVMVcESrFetE
+
+        Process Sections:
+          Section:JVPsFetE
+           An Alternative Type Process Section
+
+            Method Executed:JVMVcEMtFetEHFet
+             Method Documentation:
+            Documentation for the Method
+
+               BR Parameter Mapping:
+               
+Parameter
+Segment
+Dataitem
+ctxt_language
+fw_context
+Language
+ctxt_ouinstance
+fw_context
+OUInstance
+ctxt_service
+fw_context
+Service
+ctxt_user
+fw_context
+User
+fb
+HdrSegment
+fb
+fbhdr
+HdrSegment
+fbhdr
+fromtransactiondate
+HdrSegment
+FromTransactiondate
+guid
+HdrSegment
+Guid
+hidden_control1
+HdrSegment
+Hidden_Control1
+hidden_control2
+HdrSegment
+Hidden_Control2
+notypeno
+HdrSegment
+NoTypeNo
+totransactiondate
+HdrSegment
+ToTransactiondate
+useridentity
+HdrSegment
+useridentity
+
+
+        Service Segments:
+
+            Segment:HdrSegment
+            Non Mandatory Segment.This segment is derived from the BO Segment
+            HdrSegment of the BO JVMVcEBO
+               Dataitems:
+               fb
+               fbhdr
+               FromTransactiondate
+               Guid
+               Hidden_Control1
+               Hidden_Control2
+               NoTypeNo
+               ToTransactiondate
+               useridentity
+Task:Help on Account code [jvconmemvchrhlp1]
+      Implemented as Service:jvconmemvchrhlp1MVcE_Ser
+
+        Process Sections:
+          Section:jvconmemvchrhlp1MVcE_PS
+           An Alternative Type Process Section
+
+            Method Executed:jvconmemvchrhlp1MVcE_Met
+             Method Documentation:
+            METHOD TO POPULATE THE HIDDEN OU FOR HELP SCREEN
+
+               BR Parameter Mapping:
+               
+Parameter
+Segment
+Dataitem
+CsOuInstance_Out
+jvconmemvchrhlp1MVcE_SSeg
+CsOuInstance
+ouinstance_in
+Fw_context
+Ouinstance
+
+
+        Service Segments:
+
+            Segment:jvconmemvchrhlp1MVcE_SSeg
+            Mandatory Segment.This segment is derived from the BO Segment
+            jvconmemvchrhlp1MVcE_BoSeg of the BO jvconmemvchrhlp1MVcE_BO
+               Dataitems:
+               CsOuInstance
+Task:Initialize [JvConMemVchrIni1]
+      Implemented as Service:JVMVcESrIniE
+
+        Process Sections:
+          Section:JVPsIniE
+           An Alternative Type Process Section
+
+            Method Executed:JVAdVcMtIniCbFb
+             Method Documentation:
+            Documentation for the Method
+
+               BR Parameter Mapping:
+               
+Parameter
+Segment
+Dataitem
+ctxt_language
+fw_context
+Language
+ctxt_ouinstance
+fw_context
+OUInstance
+ctxt_service
+fw_context
+Service
+ctxt_user
+fw_context
+User
+fbhdr
+CbFbCSg
+fbhdr
+
+
+            Method Executed:JVAdVcMtIniCbNTyp
+             Method Documentation:
+            Documentation for the Method
+
+               BR Parameter Mapping:
+               
+Parameter
+Segment
+Dataitem
+ctxt_language
+fw_context
+Language
+ctxt_ouinstance
+fw_context
+OUInstance
+ctxt_service
+fw_context
+Service
+ctxt_user
+fw_context
+User
+NoTypeNo
+CbNTypCSg
+notypeno
+
+
+            Method Executed:JVAuVcEMtIniECbFbSr
+             Method Documentation:
+            Documentation for the Method
+
+               BR Parameter Mapping:
+               
+Parameter
+Segment
+Dataitem
+ctxt_language
+fw_context
+Language
+ctxt_ouinstance
+fw_context
+OUInstance
+ctxt_service
+fw_context
+Service
+ctxt_user
+fw_context
+User
+fb
+CbFbSrCSg
+fb
+
+
+        Service Segments:
+
+            Segment:CbFbCSg
+            Non Mandatory Segment.This segment is derived from the BO Segment CbFbCSg
+            of the BO JVMVcEBO
+               Dataitems:
+               fbhdr
+
+            Segment:CbFbSrCSg
+            Non Mandatory Segment.This segment is derived from the BO Segment
+            CbFbSrCSg of the BO JVMVcEBO
+               Dataitems:
+               fb
+
+            Segment:CbNTypCSg
+            Non Mandatory Segment.This segment is derived from the BO Segment
+            CbNTypCSg of the BO JVMVcEBO
+               Dataitems:
+               notypeno
+Task:Search [JvConMemVchrTrn1]
+      Implemented as Service:JVMVcESrSrch
+
+        Process Sections:
+          Section:JVPsSrch
+           An Alternative Type Process Section
+
+            Method Executed:JVMVcEMtSrchHFet
+             Method Documentation:
+            Documentation for the Method
+
+               BR Parameter Mapping:
+               
+Parameter
+Segment
+Dataitem
+accountcode
+HdrSegment
+accountcode
+ctxt_language
+fw_context
+Language
+ctxt_ouinstance
+fw_context
+OUInstance
+ctxt_service
+fw_context
+Service
+ctxt_user
+fw_context
+User
+fb
+HdrSegment
+fb
+fbhdr
+HdrSegment
+fbhdr
+fbidhdnml
+HdrSegment
+FBIDHdnML
+frombaseamount
+HdrSegment
+FromBaseAmount
+fromtransactiondate
+HdrSegment
+FromTransactiondate
+fromvoucherno
+HdrSegment
+FromVoucherNo
+guid
+HdrSegment
+Guid
+hidden_control1
+HdrSegment
+Hidden_Control1
+hidden_control2
+HdrSegment
+Hidden_Control2
+notypeno
+HdrSegment
+NoTypeNo
+tobaseamount
+HdrSegment
+ToBaseAmount
+totransactiondate
+HdrSegment
+ToTransactiondate
+tovoucherno
+HdrSegment
+ToVoucherNo
+useridentity
+HdrSegment
+useridentity
+voucher_number
+HdrSegment
+voucher_number
+
+
+            Method Executed:JVMVcEMtSrchMLe
+             Method Documentation:
+            Documentation for the Method
+
+               BR Parameter Mapping:
+               
+Parameter
+Segment
+Dataitem
+accountcode
+HdrSegment
+accountcode
+AccountCodeML
+MLeMSgO
+AccountCodeML
+baseamountml
+MLeMSgO
+baseamountml
+ctxt_language
+fw_context
+Language
+ctxt_ouinstance
+fw_context
+OUInstance
+ctxt_service
+fw_context
+Service
+ctxt_user
+fw_context
+User
+fb
+HdrSegment
+fb
+fbhdr
+HdrSegment
+fbhdr
+fbidhdnml
+HdrSegment
+FBIDHdnML
+FinTransactiondateheader2
+MLeMSgO
+FinTransactiondateheader2
+frombaseamount
+HdrSegment
+FromBaseAmount
+fromtransactiondate
+HdrSegment
+FromTransactiondate
+fromvoucherno
+HdrSegment
+FromVoucherNo
+guid
+HdrSegment
+Guid
+hidden_control1
+HdrSegment
+Hidden_Control1
+hidden_control2
+HdrSegment
+Hidden_Control2
+notypeno
+HdrSegment
+NoTypeNo
+Timestamp3
+MLeMSgO
+Timestamp3
+tobaseamount
+HdrSegment
+ToBaseAmount
+totransactiondate
+HdrSegment
+ToTransactiondate
+tovoucherno
+HdrSegment
+ToVoucherNo
+useridentity
+HdrSegment
+useridentity
+VoucherNumberML
+MLeMSgO
+VoucherNumberML
+voucher_number
+HdrSegment
+voucher_number
+
+
+        Service Segments:
+
+            Segment:HdrSegment
+            Non Mandatory Segment.This segment is derived from the BO Segment
+            HdrSegment of the BO JVMVcEBO
+               Dataitems:
+               accountcode
+               fb
+               fbhdr
+               FBIDHdnML
+               FromBaseAmount
+               FromTransactiondate
+               FromVoucherNo
+               Guid
+               Hidden_Control1
+               Hidden_Control2
+               NoTypeNo
+               ToBaseAmount
+               ToTransactiondate
+               ToVoucherNo
+               useridentity
+               voucher_number
+
+            Segment:MLeMSgO
+            Non Mandatory Segment.This segment is derived from the BO Segment MLeMSg
+            of the BO JVMVcEBO
+               Dataitems:
+               AccountCodeML
+               baseamountml
+               FinTransactiondateheader2
+               Timestamp3
+               VoucherNumberML
+Task:Create Voucher [JvConMemVchrTrn2]
+      Implemented as Service:JVMVcESrCrVoE
+
+        Process Sections:
+          Section:jvmvecwf_is
+           An Alternative Type Process Section
+
+          Section:JVPsCrVoE
+           An Alternative Type Process Section
+
+            Method Executed:JVMVcEMtCAVEHSv
+             Method Documentation:
+            Documentation for the Method
+
+               BR Parameter Mapping:
+               
+Parameter
+Segment
+Dataitem
+accountcode
+HdrSegment
+accountcode
+ctxt_language
+fw_context
+Language
+ctxt_ouinstance
+fw_context
+OUInstance
+ctxt_service
+fw_context
+Service
+ctxt_user
+fw_context
+User
+fb
+HdrSegment
+fb
+fbhdr
+HdrSegment
+fbhdr
+fpRowNo
+HdrSegment
+fpRowNo
+frombaseamount
+HdrSegment
+FromBaseAmount
+fromtransactiondate
+HdrSegment
+FromTransactiondate
+fromvoucherno
+HdrSegment
+FromVoucherNo
+guid
+HdrSegment
+Guid
+hidden_control1
+HdrSegment
+Hidden_Control1
+hidden_control2
+HdrSegment
+Hidden_Control2
+notypeno
+HdrSegment
+NoTypeNo
+tobaseamount
+HdrSegment
+ToBaseAmount
+totransactiondate
+HdrSegment
+ToTransactiondate
+tovoucherno
+HdrSegment
+ToVoucherNo
+useridentity
+HdrSegment
+useridentity
+voucher_number
+HdrSegment
+voucher_number
+
+
+          Section:JVPsCrVoE_HChk
+           An Alternative Type Process Section
+
+            Method Executed:JVMVcEMtCAVEHChk
+             Method Documentation:
+            Documentation for the Method
+
+               BR Parameter Mapping:
+               
+Parameter
+Segment
+Dataitem
+accountcode
+HdrSegment
+accountcode
+ctxt_language
+fw_context
+Language
+ctxt_ouinstance
+fw_context
+OUInstance
+ctxt_service
+fw_context
+Service
+ctxt_user
+fw_context
+User
+fb
+HdrSegment
+fb
+fbhdr
+HdrSegment
+fbhdr
+fprowno
+HdrSegment
+fpRowNo
+frombaseamount
+HdrSegment
+FromBaseAmount
+fromtransactiondate
+HdrSegment
+FromTransactiondate
+fromvoucherno
+HdrSegment
+FromVoucherNo
+guid
+HdrSegment
+Guid
+hidden_control1
+HdrSegment
+Hidden_Control1
+hidden_control2
+HdrSegment
+Hidden_Control2
+notypeno
+HdrSegment
+NoTypeNo
+tobaseamount
+HdrSegment
+ToBaseAmount
+totransactiondate
+HdrSegment
+ToTransactiondate
+tovoucherno
+HdrSegment
+ToVoucherNo
+useridentity
+HdrSegment
+useridentity
+voucher_number
+HdrSegment
+voucher_number
+
+
+          Section:JVPsCrVoE_MLe
+           An Alternative Type Process Section
+
+            Method Executed:JVMVcEMtCAVEMLe
+             Method Documentation:
+            Documentation for the Method
+
+               BR Parameter Mapping:
+               
+Parameter
+Segment
+Dataitem
+accountcode
+HdrSegment
+accountcode
+accountcodeml
+MLeMSg
+AccountCodeML
+baseamountml
+MLeMSg
+baseamountml
+ctxt_language
+fw_context
+Language
+ctxt_ouinstance
+fw_context
+OUInstance
+ctxt_service
+fw_context
+Service
+ctxt_user
+fw_context
+User
+fb
+HdrSegment
+fb
+fbhdr
+HdrSegment
+fbhdr
+fintransactiondateheader2
+MLeMSg
+FinTransactiondateheader2
+fprowno
+HdrSegment
+fpRowNo
+frombaseamount
+HdrSegment
+FromBaseAmount
+fromtransactiondate
+HdrSegment
+FromTransactiondate
+fromvoucherno
+HdrSegment
+FromVoucherNo
+guid
+HdrSegment
+Guid
+hidden_control1
+HdrSegment
+Hidden_Control1
+hidden_control2
+HdrSegment
+Hidden_Control2
+modeflag
+MLeMSg
+ModeFlag
+notypeno
+HdrSegment
+NoTypeNo
+timestamp2
+MLeMSg
+Timestamp3
+tobaseamount
+HdrSegment
+ToBaseAmount
+totransactiondate
+HdrSegment
+ToTransactiondate
+tovoucherno
+HdrSegment
+ToVoucherNo
+useridentity
+HdrSegment
+useridentity
+vouchernumberml
+MLeMSg
+VoucherNumberML
+voucher_number
+HdrSegment
+voucher_number
+
+
+          Section:JVPsCrVoE_Ref
+           An Alternative Type Process Section
+
+            Method Executed:JVMVcEMtCAVEHRef
+             Method Documentation:
+            Documentation for the Method
+
+               BR Parameter Mapping:
+               
+Parameter
+Segment
+Dataitem
+accountcode
+HdrSegment
+accountcode
+ctxt_language
+fw_context
+Language
+ctxt_ouinstance
+fw_context
+OUInstance
+ctxt_service
+fw_context
+Service
+ctxt_user
+fw_context
+User
+fb
+HdrSegment
+fb
+fbhdr
+HdrSegment
+fbhdr
+frombaseamount
+HdrSegment
+FromBaseAmount
+fromtransactiondate
+HdrSegment
+FromTransactiondate
+fromvoucherno
+HdrSegment
+FromVoucherNo
+guid
+HdrSegment
+Guid
+hidden_control1
+HdrSegment
+Hidden_Control1
+hidden_control2
+HdrSegment
+Hidden_Control2
+notypeno
+HdrSegment
+NoTypeNo
+PlaceHolder
+HdrSegment
+PlaceHolder1
+PrjSubPrjCd
+HdrSegment
+PrjSubPrjCd
+tobaseamount
+HdrSegment
+ToBaseAmount
+totransactiondate
+HdrSegment
+ToTransactiondate
+tovoucherno
+HdrSegment
+ToVoucherNo
+useridentity
+HdrSegment
+useridentity
+voucher_number
+HdrSegment
+voucher_number
+
+
+            Method Executed:JVMVcEMtCAVEMLeOut
+             Method Documentation:
+            Documentation for the Method
+
+               BR Parameter Mapping:
+               
+Parameter
+Segment
+Dataitem
+accountcode
+HdrSegment
+accountcode
+AccountCodeML
+MLeMSgO
+AccountCodeML
+baseamountml
+MLeMSgO
+baseamountml
+ctxt_language
+fw_context
+Language
+ctxt_ouinstance
+fw_context
+OUInstance
+ctxt_service
+fw_context
+Service
+ctxt_user
+fw_context
+User
+fb
+HdrSegment
+fb
+fbhdr
+HdrSegment
+fbhdr
+FinTransactiondateheader2
+MLeMSgO
+FinTransactiondateheader2
+frombaseamount
+HdrSegment
+FromBaseAmount
+fromtransactiondate
+HdrSegment
+FromTransactiondate
+fromvoucherno
+HdrSegment
+FromVoucherNo
+guid
+HdrSegment
+Guid
+hidden_control1
+HdrSegment
+Hidden_Control1
+hidden_control2
+HdrSegment
+Hidden_Control2
+notypeno
+HdrSegment
+NoTypeNo
+Timestamp3
+MLeMSgO
+Timestamp3
+tobaseamount
+HdrSegment
+ToBaseAmount
+totransactiondate
+HdrSegment
+ToTransactiondate
+tovoucherno
+HdrSegment
+ToVoucherNo
+useridentity
+HdrSegment
+useridentity
+VoucherNumberML
+MLeMSgO
+VoucherNumberML
+voucher_number
+HdrSegment
+voucher_number
+
+
+        Service Segments:
+
+            Segment:HdrSegment
+            Non Mandatory Segment.This segment is derived from the BO Segment
+            HdrSegment of the BO JVMVcEBO
+               Dataitems:
+               accountcode
+               fb
+               fbhdr
+               fpRowNo
+               FromBaseAmount
+               FromTransactiondate
+               FromVoucherNo
+               Guid
+               Hidden_Control1
+               Hidden_Control2
+               NoTypeNo
+               PlaceHolder1
+               PrjSubPrjCd
+               ToBaseAmount
+               ToTransactiondate
+               ToVoucherNo
+               useridentity
+               voucher_number
+
+            Segment:MLeMSg
+            Non Mandatory Segment.This segment is derived from the BO Segment MLeMSg
+            of the BO JVMVcEBO
+               Dataitems:
+               AccountCodeML
+               baseamountml
+               FinTransactiondateheader2
+               ModeFlag
+               Timestamp3
+               VoucherNumberML
+
+            Segment:MLeMSgO
+            Non Mandatory Segment.This segment is derived from the BO Segment MLeMSg
+            of the BO JVMVcEBO
+               Dataitems:
+               Accdesc
+               AccountCodeML
+               baseamountml
+               FinTransactiondateheader2
+               Timestamp3
+               VoucherNumberML
+Task:Create And Authorize Voucher [JvConMemVchrTrn4]
+      Implemented as Service:JVMVcESrCAVE
+
+        Process Sections:
+          Section:JVPsCAVE
+           An Alternative Type Process Section
+
+            Method Executed:JVMVcEMtCAVEHSv
+             Method Documentation:
+            Documentation for the Method
+
+               BR Parameter Mapping:
+               
+Parameter
+Segment
+Dataitem
+accountcode
+HdrSegment
+accountcode
+ctxt_language
+fw_context
+Language
+ctxt_ouinstance
+fw_context
+OUInstance
+ctxt_service
+fw_context
+Service
+ctxt_user
+fw_context
+User
+fb
+HdrSegment
+fb
+fbhdr
+HdrSegment
+fbhdr
+fpRowNo
+HdrSegment
+fpRowNo
+frombaseamount
+HdrSegment
+FromBaseAmount
+fromtransactiondate
+HdrSegment
+FromTransactiondate
+fromvoucherno
+HdrSegment
+FromVoucherNo
+guid
+HdrSegment
+Guid
+hidden_control1
+HdrSegment
+Hidden_Control1
+hidden_control2
+HdrSegment
+Hidden_Control2
+notypeno
+HdrSegment
+NoTypeNo
+tobaseamount
+HdrSegment
+ToBaseAmount
+totransactiondate
+HdrSegment
+ToTransactiondate
+tovoucherno
+HdrSegment
+ToVoucherNo
+useridentity
+HdrSegment
+useridentity
+voucher_number
+HdrSegment
+voucher_number
+
+
+          Section:JVPsCAVE_HChk
+           An Alternative Type Process Section
+
+            Method Executed:JVMVcEMtCAVEHChk
+             Method Documentation:
+            Documentation for the Method
+
+               BR Parameter Mapping:
+               
+Parameter
+Segment
+Dataitem
+accountcode
+HdrSegment
+accountcode
+ctxt_language
+fw_context
+Language
+ctxt_ouinstance
+fw_context
+OUInstance
+ctxt_service
+fw_context
+Service
+ctxt_user
+fw_context
+User
+fb
+HdrSegment
+fb
+fbhdr
+HdrSegment
+fbhdr
+fprowno
+HdrSegment
+fpRowNo
+frombaseamount
+HdrSegment
+FromBaseAmount
+fromtransactiondate
+HdrSegment
+FromTransactiondate
+fromvoucherno
+HdrSegment
+FromVoucherNo
+guid
+HdrSegment
+Guid
+hidden_control1
+HdrSegment
+Hidden_Control1
+hidden_control2
+HdrSegment
+Hidden_Control2
+notypeno
+HdrSegment
+NoTypeNo
+tobaseamount
+HdrSegment
+ToBaseAmount
+totransactiondate
+HdrSegment
+ToTransactiondate
+tovoucherno
+HdrSegment
+ToVoucherNo
+useridentity
+HdrSegment
+useridentity
+voucher_number
+HdrSegment
+voucher_number
+
+
+          Section:JVPsCAVE_MLe
+           An Alternative Type Process Section
+
+            Method Executed:JVMVcEMtCAVEMLe
+             Method Documentation:
+            Documentation for the Method
+
+               BR Parameter Mapping:
+               
+Parameter
+Segment
+Dataitem
+accountcode
+HdrSegment
+accountcode
+accountcodeml
+MLeMSg
+AccountCodeML
+baseamountml
+MLeMSg
+baseamountml
+ctxt_language
+fw_context
+Language
+ctxt_ouinstance
+fw_context
+OUInstance
+ctxt_service
+fw_context
+Service
+ctxt_user
+fw_context
+User
+fb
+HdrSegment
+fb
+fbhdr
+HdrSegment
+fbhdr
+fintransactiondateheader2
+MLeMSg
+FinTransactiondateheader2
+fprowno
+HdrSegment
+fpRowNo
+frombaseamount
+HdrSegment
+FromBaseAmount
+fromtransactiondate
+HdrSegment
+FromTransactiondate
+fromvoucherno
+HdrSegment
+FromVoucherNo
+guid
+HdrSegment
+Guid
+hidden_control1
+HdrSegment
+Hidden_Control1
+hidden_control2
+HdrSegment
+Hidden_Control2
+modeflag
+MLeMSg
+ModeFlag
+notypeno
+HdrSegment
+NoTypeNo
+timestamp2
+MLeMSg
+Timestamp3
+tobaseamount
+HdrSegment
+ToBaseAmount
+totransactiondate
+HdrSegment
+ToTransactiondate
+tovoucherno
+HdrSegment
+ToVoucherNo
+useridentity
+HdrSegment
+useridentity
+vouchernumberml
+MLeMSg
+VoucherNumberML
+voucher_number
+HdrSegment
+voucher_number
+
+
+          Section:JVPsCAVE_Ref
+           An Alternative Type Process Section
+
+            Method Executed:JVMVcEMtCAVEHRef
+             Method Documentation:
+            Documentation for the Method
+
+               BR Parameter Mapping:
+               
+Parameter
+Segment
+Dataitem
+accountcode
+HdrSegment
+accountcode
+ctxt_language
+fw_context
+Language
+ctxt_ouinstance
+fw_context
+OUInstance
+ctxt_service
+fw_context
+Service
+ctxt_user
+fw_context
+User
+fb
+HdrSegment
+fb
+fbhdr
+HdrSegment
+fbhdr
+frombaseamount
+HdrSegment
+FromBaseAmount
+fromtransactiondate
+HdrSegment
+FromTransactiondate
+fromvoucherno
+HdrSegment
+FromVoucherNo
+guid
+HdrSegment
+Guid
+hidden_control1
+HdrSegment
+Hidden_Control1
+hidden_control2
+HdrSegment
+Hidden_Control2
+notypeno
+HdrSegment
+NoTypeNo
+PlaceHolder
+HdrSegment
+PlaceHolder1
+PrjSubPrjCd
+HdrSegment
+PrjSubPrjCd
+tobaseamount
+HdrSegment
+ToBaseAmount
+totransactiondate
+HdrSegment
+ToTransactiondate
+tovoucherno
+HdrSegment
+ToVoucherNo
+useridentity
+HdrSegment
+useridentity
+voucher_number
+HdrSegment
+voucher_number
+
+
+            Method Executed:JVMVcEMtCAVEMLeOut
+             Method Documentation:
+            Documentation for the Method
+
+               BR Parameter Mapping:
+               
+Parameter
+Segment
+Dataitem
+accountcode
+HdrSegment
+accountcode
+AccountCodeML
+MLeMSgO
+AccountCodeML
+baseamountml
+MLeMSgO
+baseamountml
+ctxt_language
+fw_context
+Language
+ctxt_ouinstance
+fw_context
+OUInstance
+ctxt_service
+fw_context
+Service
+ctxt_user
+fw_context
+User
+fb
+HdrSegment
+fb
+fbhdr
+HdrSegment
+fbhdr
+FinTransactiondateheader2
+MLeMSgO
+FinTransactiondateheader2
+frombaseamount
+HdrSegment
+FromBaseAmount
+fromtransactiondate
+HdrSegment
+FromTransactiondate
+fromvoucherno
+HdrSegment
+FromVoucherNo
+guid
+HdrSegment
+Guid
+hidden_control1
+HdrSegment
+Hidden_Control1
+hidden_control2
+HdrSegment
+Hidden_Control2
+notypeno
+HdrSegment
+NoTypeNo
+Timestamp3
+MLeMSgO
+Timestamp3
+tobaseamount
+HdrSegment
+ToBaseAmount
+totransactiondate
+HdrSegment
+ToTransactiondate
+tovoucherno
+HdrSegment
+ToVoucherNo
+useridentity
+HdrSegment
+useridentity
+VoucherNumberML
+MLeMSgO
+VoucherNumberML
+voucher_number
+HdrSegment
+voucher_number
+
+
+          Section:JVPsMVcEFBP_IS
+           An Alternative Type Process Section
+
+        Service Segments:
+
+            Segment:HdrSegment
+            Non Mandatory Segment.This segment is derived from the BO Segment
+            HdrSegment of the BO JVMVcEBO
+               Dataitems:
+               accountcode
+               fb
+               fbhdr
+               fpRowNo
+               FromBaseAmount
+               FromTransactiondate
+               FromVoucherNo
+               Guid
+               Hidden_Control1
+               Hidden_Control2
+               NoTypeNo
+               PlaceHolder1
+               PrjSubPrjCd
+               ToBaseAmount
+               ToTransactiondate
+               ToVoucherNo
+               useridentity
+               voucher_number
+
+            Segment:MLeMSg
+            Non Mandatory Segment.This segment is derived from the BO Segment MLeMSg
+            of the BO JVMVcEBO
+               Dataitems:
+               AccountCodeML
+               baseamountml
+               FinTransactiondateheader2
+               ModeFlag
+               Timestamp3
+               VoucherNumberML
+
+            Segment:MLeMSgO
+            Non Mandatory Segment.This segment is derived from the BO Segment MLeMSg
+            of the BO JVMVcEBO
+               Dataitems:
+               AccDesc
+               AccountCodeML
+               baseamountml
+               FinTransactiondateheader2
+               Timestamp3
+               VoucherNumberML
+Task:Bu header on enter [JvConMemVchrUI1]
+      Implemented as Service:JVMVcESrUFbH
+
+        Process Sections:
+          Section:JVPsUFbH
+           An Alternative Type Process Section
+
+            Method Executed:JVMVcEMtUFbHUiHdr
+             Method Documentation:
+            Documentation for the Method
+
+               BR Parameter Mapping:
+               
+Parameter
+Segment
+Dataitem
+ctxt_language
+fw_context
+Language
+ctxt_ouinstance
+fw_context
+OUInstance
+ctxt_service
+fw_context
+Service
+ctxt_user
+fw_context
+User
+fbhdr
+HdrSegment
+fbhdr
+fpRowNo
+HdrSegment
+fpRowNo
+guid
+HdrSegment
+Guid
+hidden_control1
+HdrSegment
+Hidden_Control1
+hidden_control2
+HdrSegment
+Hidden_Control2
+voucher_number
+HdrSegment
+voucher_number
+
+
+          Section:JVPsUFbH_MLe
+           An Alternative Type Process Section
+
+            Method Executed:JVMVcEMtUFbHMLe
+             Method Documentation:
+            Documentation for the Method
+
+               BR Parameter Mapping:
+               
+Parameter
+Segment
+Dataitem
+Ctxt_Language
+fw_context
+Language
+ctxt_OUInstance
+fw_context
+OUInstance
+Ctxt_Service
+fw_context
+Service
+ctxt_User
+fw_context
+User
+fbhdr
+HdrSegment
+fbhdr
+fpRowNo
+HdrSegment
+fpRowNo
+Guid
+HdrSegment
+Guid
+Hidden_Control1
+HdrSegment
+Hidden_Control1
+Hidden_Control2
+HdrSegment
+Hidden_Control2
+voucher_number
+HdrSegment
+voucher_number
+
+
+        Service Segments:
+
+            Segment:HdrSegment
+            Non Mandatory Segment.This segment is derived from the BO Segment
+            HdrSegment of the BO JVMVcEBO
+               Dataitems:
+               fbhdr
+               fpRowNo
+               Guid
+               Hidden_Control1
+               Hidden_Control2
+               voucher_number
+2.2 ILBO:Convert Memorandum Voucher to Regular Voucher [JvConMemVchrmain]
+
+Task:Link to Collaborate [JOVmainsrCollabLk]
+      Implemented as Service:JOV_CMVSerColnk
+
+        Process Sections:
+          Section:JOV_PSColnkH_PSRef
+           An Alternative Type Process Section
+
+            Method Executed:JOV_CMV_MtColnk_HRef
+             Method Documentation:
+            Method for Refreshing Header Controls for the Page Save task
+            JOVmainsrCollabLk
+
+               BR Parameter Mapping:
+               
+Parameter
+Segment
+Dataitem
+ctxt_Language
+fw_context
+Language
+ctxt_OUInstance
+fw_context
+OUInstance
+ctxt_Service
+fw_context
+Service
+ctxt_User
+fw_context
+User
+Guid
+_HSeg
+Guid
+hdnnts_status
+_HSeg
+hdnnts_status
+hdnnts_trantype
+_HSeg
+hdnnts_trantype
+OUInstID
+_HSeg
+OUInstID
+voucher_number
+_HSeg
+voucher_number
+
+
+        Service Segments:
+
+            Segment:_HSeg
+            Non Mandatory Segment.This segment is derived from the BO Segment _HSeg of
+            the BO JOV_CMV_BO
+               Dataitems:
+               Guid
+               hdnnts_status
+               hdnnts_trantype
+               OUInstID
+               voucher_number
+Task:Help on Project / Sub-Project Code [JOVmainsrPrjSubHp]
+      Implemented as Service:JOV_JV_Ser_Hp_PjCo
+
+        Process Sections:
+          Section:JOV_PS_Hp_PjCoH_PSRef
+           An Alternative Type Process Section
+
+            Method Executed:JOV_JV__Mt_Hp_PjCo_HRef
+             Method Documentation:
+            Method for Refreshing Header Controls for the Page Save task
+            JOVmains7PrjSubHp
+
+               BR Parameter Mapping:
+               
+Parameter
+Segment
+Dataitem
+CsOuInstance
+_HSeg
+CsOuInstance
+ctxt_Language
+fw_context
+Language
+ctxt_OUInstance
+fw_context
+OUInstance
+ctxt_Service
+fw_context
+Service
+ctxt_User
+fw_context
+User
+Guid
+_HSeg
+Guid
+Hidden_Control1
+_HSeg
+Hidden_Control1
+Hidden_Control2
+_HSeg
+Hidden_Control2
+PrjOU
+_HSeg
+PrjOU
+PrjSubPrjCd
+_HSeg
+PrjSubPrjCd
+
+
+        Service Segments:
+
+            Segment:_HSeg
+            Non Mandatory Segment.This segment is derived from the BO Segment _HSeg of
+            the BO JOV_JV__BO
+               Dataitems:
+               CsOuInstance
+               Guid
+               Hidden_Control1
+               Hidden_Control2
+               PrjOU
+               PrjSubPrjCd
+Task:On Enter of Project / Sub-Project Code [JOVmainsrPrjSubUi]
+      Implemented as Service:JOV_CMVSer_PrjCo
+
+        Process Sections:
+          Section:JOV_PS_PrjCoH_PSRef
+           An Alternative Type Process Section
+
+            Method Executed:JOV_CJV__Mt_PjSub_HdrRef
+             Method Documentation:
+            Method for Refreshing Header Controls for the Page Save task
+            JOVmains7PrjSubUi
+
+               BR Parameter Mapping:
+               
+Parameter
+Segment
+Dataitem
+ctxt_Language
+FW_CONTEXT
+Language
+ctxt_OUInstance
+FW_CONTEXT
+OUInstance
+ctxt_Service
+FW_CONTEXT
+Service
+ctxt_User
+FW_CONTEXT
+User
+PrjOU
+_HSeg
+PrjOU
+PrjSubPrjCd
+_HSeg
+PrjSubPrjCd
+PrjSubPrjDesc
+_HSeg
+PrjSubPrjDesc
+
+
+        Service Segments:
+
+            Segment:_HSeg
+            Non Mandatory Segment.This segment is derived from the BO Segment _HSeg of
+            the BO JOV_CMV_BO
+               Dataitems:
+               PrjOU
+               PrjSubPrjCd
+               PrjSubPrjDesc
+Task:Link to Specify Dimensions [JOVmainsrSpecifLk]
+      Implemented as Service:JOV_CMVSrSpecif
+
+        Process Sections:
+          Section:JOV_PSSpecifH_PSRef
+           An Alternative Type Process Section
+
+            Method Executed:JOV_CMVMtSpecif_HRef
+             Method Documentation:
+            Method for Refreshing Header Controls for the Page Save task
+            JOVmainsrSpecifLk
+
+               BR Parameter Mapping:
+               
+Parameter
+Segment
+Dataitem
+ctxt_Language
+fw_context
+Language
+ctxt_OUInstance
+fw_context
+OUInstance
+ctxt_Service
+fw_context
+Service
+ctxt_User
+fw_context
+User
+hdnnts_trantype
+_HSeg
+hdnnts_trantype
+voucher_number
+_HSeg
+voucher_number
+
+
+        Service Segments:
+
+            Segment:_HSeg
+            Non Mandatory Segment.This segment is derived from the BO Segment _HSeg of
+            the BO JOV_CMV_BO
+               Dataitems:
+               hdnnts_trantype
+               voucher_number
+Task:Default Fetch [JvConMemVchrFth2]
+      Implemented as Service:JVMVcMSrFetM
+
+        Process Sections:
+          Section:JVPsFetM
+           An Alternative Type Process Section
+
+            Method Executed:JVMVcMMtFetMHFet
+             Method Documentation:
+            Documentation for the Method
+
+               BR Parameter Mapping:
+               
+Parameter
+Segment
+Dataitem
+AFENO
+HdrSegment
+AFENumber
+controltotal
+HdrSegment
+ControlTotal
+COSTCENTERHDR
+HdrSegment
+Costcenter
+credittotal
+HdrSegment
+CreditTotal
+credittransactiontotal
+HdrSegment
+CreditTransactionTotal
+ctxt_language
+fw_context
+Language
+ctxt_ouinstance
+fw_context
+OUInstance
+ctxt_service
+fw_context
+Service
+ctxt_user
+fw_context
+User
+debittotal
+HdrSegment
+DebitTotal
+debittransactiontotal
+HdrSegment
+DebitTransactionTotal
+fb
+HdrSegment
+fb
+fbidhdnhdr
+HdrSegment
+FBIDHdnHdr
+fbidhdnml
+HdrSegment
+FBIDHdnML
+guid
+HdrSegment
+Guid
+hidden_control1
+HdrSegment
+Hidden_Control1
+hidden_control2
+HdrSegment
+Hidden_Control2
+JOBNO
+HdrSegment
+JOBNumber
+jvnarration
+HdrSegment
+JVNarration
+notypeno
+HdrSegment
+Notypeno
+PrjOU
+HdrSegment
+PrjOU
+PrjSubPrjCd
+HdrSegment
+PrjSubPrjCd
+PrjSubPrjDesc
+HdrSegment
+PrjSubPrjDesc
+timestamp
+HdrSegment
+Timestamp
+transactiondate
+HdrSegment
+Transactiondate
+voucherhidh
+HdrSegment
+VoucherHidH
+voucherhidml
+HdrSegment
+VoucherHidML
+vouchernumberml
+HdrSegment
+VoucherNumberML
+voucherremarks
+HdrSegment
+VoucherRemarks
+voucher_number
+HdrSegment
+voucher_number
+
+
+            Method Executed:JVMVcMMtFetMMLm
+             Method Documentation:
+            Documentation for the Method
+
+               BR Parameter Mapping:
+               
+Parameter
+Segment
+Dataitem
+AccountCode
+MLmMSgO
+AccountCode
+Account_desc
+MLmMSgO
+AccDesc
+Analysiscode
+MLmMSgO
+Analysiscode
+BaseAmount
+MLmMSgO
+BaseAmount
+controltotal
+HdrSegment
+ControlTotal
+CostCenter
+MLmMSgO
+CostCenter
+credittotal
+HdrSegment
+CreditTotal
+credittransactiontotal
+HdrSegment
+CreditTransactionTotal
+ctxt_language
+fw_context
+Language
+ctxt_ouinstance
+fw_context
+OUInstance
+ctxt_service
+fw_context
+Service
+ctxt_user
+fw_context
+User
+DebitCredit
+MLmMSgO
+DebitCredit
+debittotal
+HdrSegment
+DebitTotal
+debittransactiontotal
+HdrSegment
+DebitTransactionTotal
+exchangerateml
+MLmMSgO
+exchangerateml
+fb
+HdrSegment
+fb
+fbidhdnhdr
+HdrSegment
+FBIDHdnHdr
+fbidhdnml
+HdrSegment
+FBIDHdnML
+guid
+HdrSegment
+Guid
+hidden_control1
+HdrSegment
+Hidden_Control1
+hidden_control2
+HdrSegment
+Hidden_Control2
+jvnarration
+HdrSegment
+JVNarration
+notypeno
+HdrSegment
+Notypeno
+RemarksML
+MLmMSgO
+RemarksML
+SubanalysisCode
+MLmMSgO
+SubanalysisCode
+timestamp
+HdrSegment
+Timestamp
+Timestamp3
+MLmMSgO
+Timestamp3
+TranAmountML
+MLmMSgO
+TranAmountML
+TranCurrencyML
+MLmMSgO
+TranCurrencyML
+transactiondate
+HdrSegment
+Transactiondate
+voucherhidh
+HdrSegment
+VoucherHidH
+voucherhidml
+HdrSegment
+VoucherHidML
+vouchernumberml
+HdrSegment
+VoucherNumberML
+voucherremarks
+HdrSegment
+VoucherRemarks
+voucher_number
+HdrSegment
+voucher_number
+
+
+        Service Segments:
+
+            Segment:HdrSegment
+            Non Mandatory Segment.This segment is derived from the BO Segment
+            HdrSegment of the BO JVMVcMBO
+               Dataitems:
+               AFENumber
+               ControlTotal
+               Costcenter
+               CreditTotal
+               CreditTransactionTotal
+               DebitTotal
+               DebitTransactionTotal
+               fb
+               FBIDHdnHdr
+               FBIDHdnML
+               Guid
+               Hidden_Control1
+               Hidden_Control2
+               JOBNumber
+               JVNarration
+               Notypeno
+               PrjOU
+               PrjSubPrjCd
+               PrjSubPrjDesc
+               Timestamp
+               Transactiondate
+               VoucherHidH
+               VoucherHidML
+               VoucherNumberML
+               VoucherRemarks
+               voucher_number
+
+            Segment:MLmMSgO
+            Non Mandatory Segment.This segment is derived from the BO Segment MLmMSg
+            of the BO JVMVcMBO
+               Dataitems:
+               AccDesc
+               AccountCode
+               Analysiscode
+               BaseAmount
+               CostCenter
+               DebitCredit
+               exchangerateml
+               RemarksML
+               SubanalysisCode
+               Timestamp3
+               TranAmountML
+               TranCurrencyML
+Task:Initialize [JvConMemVchrIni2]
+      Implemented as Service:JVMVcMSrIniM
+
+        Process Sections:
+          Section:JVPsIniM
+           An Alternative Type Process Section
+
+            Method Executed:JVAdVcMtIniCbNTyp
+             Method Documentation:
+            Documentation for the Method
+
+               BR Parameter Mapping:
+               
+Parameter
+Segment
+Dataitem
+ctxt_language
+fw_context
+Language
+ctxt_ouinstance
+fw_context
+OUInstance
+ctxt_service
+fw_context
+Service
+ctxt_user
+fw_context
+User
+Notypeno
+CbNTypCSg
+notypeno
+
+
+            Method Executed:JVAdVc_M_IniCb_POU
+        Service Segments:
+
+            Segment:CbNTypCSg
+            Non Mandatory Segment.This segment is derived from the BO Segment
+            CbNTypCSg of the BO JVMVcMBO
+               Dataitems:
+               notypeno
+
+            Segment:CbPrjOUSeg
+            Non Mandatory Segment.This segment is derived from the BO Segment
+            CbNTypCSg of the BO JVMVcEBO
+               Dataitems:
+               PrjOU
+Task:Attach Notes [JvConMemVchrLnk4]
+      Implemented as Service:JOVAttNotSrHRef
+
+        Process Sections:
+          Section:JOVPSHRefHPSRef
+           An Alternative Type Process Section
+
+            Method Executed:JOVAttNotMtHRefHdrRef
+             Method Documentation:
+            Method for Refreshing Header Controls for the Page Save task
+            Jv_1AuVchrLnk3
+
+               BR Parameter Mapping:
+               
+Parameter
+Segment
+Dataitem
+ctxt_Language
+fw_context
+Language
+ctxt_OUInstance
+fw_context
+OUInstance
+ctxt_Service
+fw_context
+Service
+ctxt_User
+fw_context
+User
+guid
+_HSeg
+guid
+hdntranou_022
+_HSeg
+hdntranou_022
+hdntrantype
+_HSeg
+hdntrantype
+Status
+_HSeg
+Status
+Voucher_Number
+_HSeg
+Voucher_Number
+
+
+        Service Segments:
+
+            Segment:_HSeg
+            Non Mandatory Segment.This segment is derived from the BO Segment _HSeg of
+            the BO JOVAttNot_BO
+               Dataitems:
+               guid
+               hdntranou_022
+               hdntrantype
+               Status
+               Voucher_Number
+Task:Create Voucher [JvConMemVchrTrn3]
+      Implemented as Service:JVMVcMSrCVoM
+
+        Process Sections:
+          Section:jvmvmcwf_is
+           An Alternative Type Process Section
+
+          Section:JVPsCVoM
+           An Alternative Type Process Section
+
+            Method Executed:JVMVcMMtCAVMHSv
+             Method Documentation:
+            Documentation for the Method
+
+               BR Parameter Mapping:
+               
+Parameter
+Segment
+Dataitem
+controltotal
+HdrSegment
+ControlTotal
+credittotal
+HdrSegment
+CreditTotal
+credittransactiontotal
+HdrSegment
+CreditTransactionTotal
+ctxt_language
+fw_context
+Language
+ctxt_ouinstance
+fw_context
+OUInstance
+ctxt_service
+fw_context
+Service
+ctxt_user
+fw_context
+User
+debittotal
+HdrSegment
+DebitTotal
+debittransactiontotal
+HdrSegment
+DebitTransactionTotal
+fb
+HdrSegment
+fb
+fpRowNo
+HdrSegment
+fpRowNo
+guid
+HdrSegment
+Guid
+hidden_control1
+HdrSegment
+Hidden_Control1
+hidden_control2
+HdrSegment
+Hidden_Control2
+jvnarration
+HdrSegment
+JVNarration
+notypeno
+HdrSegment
+Notypeno
+timestamp
+HdrSegment
+Timestamp
+transactiondate
+HdrSegment
+Transactiondate
+vouchernumberml
+HdrSegment
+VoucherNumberML
+voucherremarks
+HdrSegment
+VoucherRemarks
+voucher_number
+HdrSegment
+voucher_number
+
+
+          Section:JVPsCVoM_HChk
+           An Alternative Type Process Section
+
+            Method Executed:JVMVcMMtCAVMHChk
+             Method Documentation:
+            Documentation for the Method
+
+               BR Parameter Mapping:
+               
+Parameter
+Segment
+Dataitem
+AFENO
+HdrSegment
+AFENumber
+controltotal
+HdrSegment
+ControlTotal
+COSTCENTERHDR
+HdrSegment
+Costcenter
+credittotal
+HdrSegment
+CreditTotal
+credittransactiontotal
+HdrSegment
+CreditTransactionTotal
+ctxt_language
+fw_context
+Language
+ctxt_ouinstance
+fw_context
+OUInstance
+ctxt_service
+fw_context
+Service
+ctxt_user
+fw_context
+User
+debittotal
+HdrSegment
+DebitTotal
+debittransactiontotal
+HdrSegment
+DebitTransactionTotal
+fb
+HdrSegment
+fb
+fprowno
+HdrSegment
+fpRowNo
+guid
+HdrSegment
+Guid
+hidden_control1
+HdrSegment
+Hidden_Control1
+hidden_control2
+HdrSegment
+Hidden_Control2
+JOBNO
+HdrSegment
+JOBNumber
+jvnarration
+HdrSegment
+JVNarration
+notypeno
+HdrSegment
+Notypeno
+PrjOU
+HdrSegment
+PrjOU
+PrjSubPrjDesc
+HdrSegment
+PrjSubPrjDesc
+projectcode
+HdrSegment
+PrjSubPrjCd
+timestamp
+HdrSegment
+Timestamp
+transactiondate
+HdrSegment
+Transactiondate
+vouchernumberml
+HdrSegment
+VoucherNumberML
+voucherremarks
+HdrSegment
+VoucherRemarks
+voucher_number
+HdrSegment
+voucher_number
+
+
+          Section:JVPsCVoM_MLm
+           An Alternative Type Process Section
+
+            Method Executed:JVMVcMMtCAVMMLm
+             Method Documentation:
+            Documentation for the Method
+
+               BR Parameter Mapping:
+               
+Parameter
+Segment
+Dataitem
+accountcode
+MLmMSg
+AccountCode
+analysiscode
+MLmMSg
+Analysiscode
+baseamount
+MLmMSg
+BaseAmount
+controltotal
+HdrSegment
+ControlTotal
+costcenter
+MLmMSg
+CostCenter
+credittotal
+HdrSegment
+CreditTotal
+credittransactiontotal
+HdrSegment
+CreditTransactionTotal
+ctxt_language
+fw_context
+Language
+ctxt_ouinstance
+fw_context
+OUInstance
+ctxt_service
+fw_context
+Service
+ctxt_user
+fw_context
+User
+debitcredit
+MLmMSg
+DebitCredit
+debittotal
+HdrSegment
+DebitTotal
+debittransactiontotal
+HdrSegment
+DebitTransactionTotal
+exchangerateml
+MLmMSg
+exchangerateml
+fb
+HdrSegment
+fb
+fprowno
+HdrSegment
+fpRowNo
+guid
+HdrSegment
+Guid
+hidden_control1
+HdrSegment
+Hidden_Control1
+hidden_control2
+HdrSegment
+Hidden_Control2
+jvnarration
+HdrSegment
+JVNarration
+modeflag
+MLmMSg
+ModeFlag
+notypeno
+HdrSegment
+Notypeno
+remarksml
+MLmMSg
+RemarksML
+subanalysiscode
+MLmMSg
+SubanalysisCode
+timestamp
+HdrSegment
+Timestamp
+timestamp2
+MLmMSg
+Timestamp3
+tranamountml
+MLmMSg
+TranAmountML
+trancurrencyml
+MLmMSg
+TranCurrencyML
+transactiondate
+HdrSegment
+Transactiondate
+vouchernumberml
+HdrSegment
+VoucherNumberML
+voucherremarks
+HdrSegment
+VoucherRemarks
+voucher_number
+HdrSegment
+voucher_number
+
+
+          Section:JVPsCVoM_Ref
+           An Alternative Type Process Section
+
+            Method Executed:JVMVcMMtCAVMHRef
+             Method Documentation:
+            Documentation for the Method
+
+               BR Parameter Mapping:
+               
+Parameter
+Segment
+Dataitem
+AFENO
+HdrSegment
+AFENumber
+controltotal
+HdrSegment
+ControlTotal
+COSTCENTERHDR
+HdrSegment
+Costcenter
+credittotal
+HdrSegment
+CreditTotal
+credittransactiontotal
+HdrSegment
+CreditTransactionTotal
+ctxt_language
+fw_context
+Language
+ctxt_ouinstance
+fw_context
+OUInstance
+ctxt_service
+fw_context
+Service
+ctxt_user
+fw_context
+User
+debittotal
+HdrSegment
+DebitTotal
+debittransactiontotal
+HdrSegment
+DebitTransactionTotal
+fb
+HdrSegment
+fb
+guid
+HdrSegment
+Guid
+hidden_control1
+HdrSegment
+Hidden_Control1
+hidden_control2
+HdrSegment
+Hidden_Control2
+JOBNO
+HdrSegment
+JOBNumber
+jvnarration
+HdrSegment
+JVNarration
+notypeno
+HdrSegment
+Notypeno
+PrjOU
+HdrSegment
+PrjOU
+PrjSubPrjCd
+HdrSegment
+PrjSubPrjCd
+PrjSubPrjDesc
+HdrSegment
+PrjSubPrjDesc
+timestamp
+HdrSegment
+Timestamp
+transactiondate
+HdrSegment
+Transactiondate
+vouchernumberml
+HdrSegment
+VoucherNumberML
+voucherremarks
+HdrSegment
+VoucherRemarks
+voucher_number
+HdrSegment
+voucher_number
+
+
+            Method Executed:JVMVcMMtCAVMMLmOut
+             Method Documentation:
+            Documentation for the Method
+
+               BR Parameter Mapping:
+               
+Parameter
+Segment
+Dataitem
+AccountCode
+MLmMSgO
+AccountCode
+Account_desc
+MLmMSgO
+AccDesc
+Analysiscode
+MLmMSgO
+Analysiscode
+BaseAmount
+MLmMSgO
+BaseAmount
+controltotal
+HdrSegment
+ControlTotal
+CostCenter
+MLmMSgO
+CostCenter
+credittotal
+HdrSegment
+CreditTotal
+credittransactiontotal
+HdrSegment
+CreditTransactionTotal
+ctxt_language
+fw_context
+Language
+ctxt_ouinstance
+fw_context
+OUInstance
+ctxt_service
+fw_context
+Service
+ctxt_user
+fw_context
+User
+DebitCredit
+MLmMSgO
+DebitCredit
+debittotal
+HdrSegment
+DebitTotal
+debittransactiontotal
+HdrSegment
+DebitTransactionTotal
+exchangerateml
+MLmMSgO
+exchangerateml
+fb
+HdrSegment
+fb
+guid
+HdrSegment
+Guid
+hidden_control1
+HdrSegment
+Hidden_Control1
+hidden_control2
+HdrSegment
+Hidden_Control2
+jvnarration
+HdrSegment
+JVNarration
+notypeno
+HdrSegment
+Notypeno
+PlaceHolder
+HdrSegment
+PlaceHolder1
+PrjSubPrjCd
+HdrSegment
+PrjSubPrjCd
+RemarksML
+MLmMSgO
+RemarksML
+SubanalysisCode
+MLmMSgO
+SubanalysisCode
+timestamp
+HdrSegment
+Timestamp
+Timestamp3
+MLmMSgO
+Timestamp3
+TranAmountML
+MLmMSgO
+TranAmountML
+TranCurrencyML
+MLmMSgO
+TranCurrencyML
+transactiondate
+HdrSegment
+Transactiondate
+vouchernumberml
+HdrSegment
+VoucherNumberML
+voucherremarks
+HdrSegment
+VoucherRemarks
+voucher_number
+HdrSegment
+voucher_number
+
+
+        Service Segments:
+
+            Segment:HdrSegment
+            Non Mandatory Segment.This segment is derived from the BO Segment
+            HdrSegment of the BO JVMVcMBO
+               Dataitems:
+               AFENumber
+               ControlTotal
+               Costcenter
+               CreditTotal
+               CreditTransactionTotal
+               DebitTotal
+               DebitTransactionTotal
+               fb
+               fpRowNo
+               Guid
+               Hidden_Control1
+               Hidden_Control2
+               JOBNumber
+               JVNarration
+               Notypeno
+               PlaceHolder1
+               PrjOU
+               PrjSubPrjCd
+               PrjSubPrjDesc
+               Timestamp
+               Transactiondate
+               VoucherNumberML
+               VoucherRemarks
+               voucher_number
+
+            Segment:MLmMSg
+            Non Mandatory Segment.This segment is derived from the BO Segment MLmMSg
+            of the BO JVMVcMBO
+               Dataitems:
+               AccountCode
+               Analysiscode
+               BaseAmount
+               CostCenter
+               DebitCredit
+               exchangerateml
+               ModeFlag
+               RemarksML
+               SubanalysisCode
+               Timestamp3
+               TranAmountML
+               TranCurrencyML
+
+            Segment:MLmMSgO
+            Non Mandatory Segment.This segment is derived from the BO Segment MLmMSg
+            of the BO JVMVcMBO
+               Dataitems:
+               AccDesc
+               AccountCode
+               Analysiscode
+               BaseAmount
+               CostCenter
+               DebitCredit
+               exchangerateml
+               RemarksML
+               SubanalysisCode
+               Timestamp3
+               TranAmountML
+               TranCurrencyML
+Task:Create And Authorize Voucher [JvConMemVchrTrn5]
+      Implemented as Service:JVMVcMSrCAVM
+
+        Process Sections:
+          Section:JVPsCAVM
+           An Alternative Type Process Section
+
+            Method Executed:JVMVcMMtCAVMHSv
+             Method Documentation:
+            Documentation for the Method
+
+               BR Parameter Mapping:
+               
+Parameter
+Segment
+Dataitem
+controltotal
+HdrSegment
+ControlTotal
+credittotal
+HdrSegment
+CreditTotal
+credittransactiontotal
+HdrSegment
+CreditTransactionTotal
+ctxt_language
+fw_context
+Language
+ctxt_ouinstance
+fw_context
+OUInstance
+ctxt_service
+fw_context
+Service
+ctxt_user
+fw_context
+User
+debittotal
+HdrSegment
+DebitTotal
+debittransactiontotal
+HdrSegment
+DebitTransactionTotal
+fb
+HdrSegment
+fb
+fpRowNo
+HdrSegment
+fpRowNo
+guid
+HdrSegment
+Guid
+hidden_control1
+HdrSegment
+Hidden_Control1
+hidden_control2
+HdrSegment
+Hidden_Control2
+jvnarration
+HdrSegment
+JVNarration
+notypeno
+HdrSegment
+Notypeno
+timestamp
+HdrSegment
+Timestamp
+transactiondate
+HdrSegment
+Transactiondate
+vouchernumberml
+HdrSegment
+VoucherNumberML
+voucherremarks
+HdrSegment
+VoucherRemarks
+voucher_number
+HdrSegment
+voucher_number
+
+
+          Section:JVPsCAVM_HChk
+           An Alternative Type Process Section
+
+            Method Executed:JVMVcMMtCAVMHChk
+             Method Documentation:
+            Documentation for the Method
+
+               BR Parameter Mapping:
+               
+Parameter
+Segment
+Dataitem
+AFENO
+HdrSegment
+AFENumber
+controltotal
+HdrSegment
+ControlTotal
+COSTCENTERHDR
+HdrSegment
+Costcenter
+credittotal
+HdrSegment
+CreditTotal
+credittransactiontotal
+HdrSegment
+CreditTransactionTotal
+ctxt_language
+fw_context
+Language
+ctxt_ouinstance
+fw_context
+OUInstance
+ctxt_service
+fw_context
+Service
+ctxt_user
+fw_context
+User
+debittotal
+HdrSegment
+DebitTotal
+debittransactiontotal
+HdrSegment
+DebitTransactionTotal
+fb
+HdrSegment
+fb
+fprowno
+HdrSegment
+fpRowNo
+guid
+HdrSegment
+Guid
+hidden_control1
+HdrSegment
+Hidden_Control1
+hidden_control2
+HdrSegment
+Hidden_Control2
+JOBNO
+HdrSegment
+JOBNumber
+jvnarration
+HdrSegment
+JVNarration
+notypeno
+HdrSegment
+Notypeno
+PrjOU
+HdrSegment
+PrjOU
+PrjSubPrjDesc
+HdrSegment
+PrjSubPrjDesc
+projectcode
+HdrSegment
+PrjSubPrjCd
+timestamp
+HdrSegment
+Timestamp
+transactiondate
+HdrSegment
+Transactiondate
+vouchernumberml
+HdrSegment
+VoucherNumberML
+voucherremarks
+HdrSegment
+VoucherRemarks
+voucher_number
+HdrSegment
+voucher_number
+
+
+          Section:JVPsCAVM_MLm
+           An Alternative Type Process Section
+
+            Method Executed:JVMVcMMtCAVMMLm
+             Method Documentation:
+            Documentation for the Method
+
+               BR Parameter Mapping:
+               
+Parameter
+Segment
+Dataitem
+accountcode
+MLmMSg
+AccountCode
+analysiscode
+MLmMSg
+Analysiscode
+baseamount
+MLmMSg
+BaseAmount
+controltotal
+HdrSegment
+ControlTotal
+costcenter
+MLmMSg
+CostCenter
+credittotal
+HdrSegment
+CreditTotal
+credittransactiontotal
+HdrSegment
+CreditTransactionTotal
+ctxt_language
+fw_context
+Language
+ctxt_ouinstance
+fw_context
+OUInstance
+ctxt_service
+fw_context
+Service
+ctxt_user
+fw_context
+User
+debitcredit
+MLmMSg
+DebitCredit
+debittotal
+HdrSegment
+DebitTotal
+debittransactiontotal
+HdrSegment
+DebitTransactionTotal
+exchangerateml
+MLmMSg
+exchangerateml
+fb
+HdrSegment
+fb
+fprowno
+HdrSegment
+fpRowNo
+guid
+HdrSegment
+Guid
+hidden_control1
+HdrSegment
+Hidden_Control1
+hidden_control2
+HdrSegment
+Hidden_Control2
+jvnarration
+HdrSegment
+JVNarration
+modeflag
+MLmMSg
+ModeFlag
+notypeno
+HdrSegment
+Notypeno
+remarksml
+MLmMSg
+RemarksML
+subanalysiscode
+MLmMSg
+SubanalysisCode
+timestamp
+HdrSegment
+Timestamp
+timestamp2
+MLmMSg
+Timestamp3
+tranamountml
+MLmMSg
+TranAmountML
+trancurrencyml
+MLmMSg
+TranCurrencyML
+transactiondate
+HdrSegment
+Transactiondate
+vouchernumberml
+HdrSegment
+VoucherNumberML
+voucherremarks
+HdrSegment
+VoucherRemarks
+voucher_number
+HdrSegment
+voucher_number
+
+
+          Section:JVPsCAVM_Ref
+           An Alternative Type Process Section
+
+            Method Executed:JVMVcMMtCAVMHRef
+             Method Documentation:
+            Documentation for the Method
+
+               BR Parameter Mapping:
+               
+Parameter
+Segment
+Dataitem
+AFENO
+HdrSegment
+AFENumber
+controltotal
+HdrSegment
+ControlTotal
+COSTCENTERHDR
+HdrSegment
+Costcenter
+credittotal
+HdrSegment
+CreditTotal
+credittransactiontotal
+HdrSegment
+CreditTransactionTotal
+ctxt_language
+fw_context
+Language
+ctxt_ouinstance
+fw_context
+OUInstance
+ctxt_service
+fw_context
+Service
+ctxt_user
+fw_context
+User
+debittotal
+HdrSegment
+DebitTotal
+debittransactiontotal
+HdrSegment
+DebitTransactionTotal
+fb
+HdrSegment
+fb
+guid
+HdrSegment
+Guid
+hidden_control1
+HdrSegment
+Hidden_Control1
+hidden_control2
+HdrSegment
+Hidden_Control2
+JOBNO
+HdrSegment
+JOBNumber
+jvnarration
+HdrSegment
+JVNarration
+notypeno
+HdrSegment
+Notypeno
+PrjOU
+HdrSegment
+PrjOU
+PrjSubPrjCd
+HdrSegment
+PrjSubPrjCd
+PrjSubPrjDesc
+HdrSegment
+PrjSubPrjDesc
+timestamp
+HdrSegment
+Timestamp
+transactiondate
+HdrSegment
+Transactiondate
+vouchernumberml
+HdrSegment
+VoucherNumberML
+voucherremarks
+HdrSegment
+VoucherRemarks
+voucher_number
+HdrSegment
+voucher_number
+
+
+            Method Executed:JVMVcMMtCAVMMLmOut
+             Method Documentation:
+            Documentation for the Method
+
+               BR Parameter Mapping:
+               
+Parameter
+Segment
+Dataitem
+AccountCode
+MLmMSgO
+AccountCode
+Account_desc
+MLmMSgO
+Accdesc
+Analysiscode
+MLmMSgO
+Analysiscode
+BaseAmount
+MLmMSgO
+BaseAmount
+controltotal
+HdrSegment
+ControlTotal
+CostCenter
+MLmMSgO
+CostCenter
+credittotal
+HdrSegment
+CreditTotal
+credittransactiontotal
+HdrSegment
+CreditTransactionTotal
+ctxt_language
+fw_context
+Language
+ctxt_ouinstance
+fw_context
+OUInstance
+ctxt_service
+fw_context
+Service
+ctxt_user
+fw_context
+User
+DebitCredit
+MLmMSgO
+DebitCredit
+debittotal
+HdrSegment
+DebitTotal
+debittransactiontotal
+HdrSegment
+DebitTransactionTotal
+exchangerateml
+MLmMSgO
+exchangerateml
+fb
+HdrSegment
+fb
+guid
+HdrSegment
+Guid
+hidden_control1
+HdrSegment
+Hidden_Control1
+hidden_control2
+HdrSegment
+Hidden_Control2
+jvnarration
+HdrSegment
+JVNarration
+notypeno
+HdrSegment
+Notypeno
+PlaceHolder
+HdrSegment
+PlaceHolder1
+PrjSubPrjCd
+HdrSegment
+PrjSubPrjCd
+RemarksML
+MLmMSgO
+RemarksML
+SubanalysisCode
+MLmMSgO
+SubanalysisCode
+timestamp
+HdrSegment
+Timestamp
+Timestamp3
+MLmMSgO
+Timestamp3
+TranAmountML
+MLmMSgO
+TranAmountML
+TranCurrencyML
+MLmMSgO
+TranCurrencyML
+transactiondate
+HdrSegment
+Transactiondate
+vouchernumberml
+HdrSegment
+VoucherNumberML
+voucherremarks
+HdrSegment
+VoucherRemarks
+voucher_number
+HdrSegment
+voucher_number
+
+
+          Section:JVPsMVcMFBP_IS
+           An Alternative Type Process Section
+
+        Service Segments:
+
+            Segment:HdrSegment
+            Non Mandatory Segment.This segment is derived from the BO Segment
+            HdrSegment of the BO JVMVcMBO
+               Dataitems:
+               AFENumber
+               ControlTotal
+               Costcenter
+               CreditTotal
+               CreditTransactionTotal
+               DebitTotal
+               DebitTransactionTotal
+               fb
+               fpRowNo
+               Guid
+               Hidden_Control1
+               Hidden_Control2
+               JOBNumber
+               JVNarration
+               Notypeno
+               PlaceHolder1
+               PrjOU
+               PrjSubPrjCd
+               PrjSubPrjDesc
+               Timestamp
+               Transactiondate
+               VoucherNumberML
+               VoucherRemarks
+               voucher_number
+
+            Segment:MLmMSg
+            Non Mandatory Segment.This segment is derived from the BO Segment MLmMSg
+            of the BO JVMVcMBO
+               Dataitems:
+               AccountCode
+               Analysiscode
+               BaseAmount
+               CostCenter
+               DebitCredit
+               exchangerateml
+               ModeFlag
+               RemarksML
+               SubanalysisCode
+               Timestamp3
+               TranAmountML
+               TranCurrencyML
+
+            Segment:MLmMSgO
+            Non Mandatory Segment.This segment is derived from the BO Segment MLmMSg
+            of the BO JVMVcMBO
+               Dataitems:
+               Accdesc
+               AccountCode
+               Analysiscode
+               BaseAmount
+               CostCenter
+               DebitCredit
+               exchangerateml
+               RemarksML
+               SubanalysisCode
+               Timestamp3
+               TranAmountML
+               TranCurrencyML
+3 Activity:Create Distribution Setup [JvCrDNS]
+
+3.1 ILBO:Create Distribution Setup [JvCrDNSmain]
+
+Task:Default Fetch [JvCrDNSFth1]
+      Implemented as Service:JVCrDnSrFet
+
+        Process Sections:
+          Section:JVPsFet
+           An Alternative Type Process Section
+
+            Method Executed:JVaccountcode_MET
+            Method Executed:JVanalysiscode_MET
+            Method Executed:JVcostcenter_MET
+            Method Executed:JVCrDnMtFetHFet
+             Method Documentation:
+            Documentation for the Method
+
+               BR Parameter Mapping:
+               
+Parameter
+Segment
+Dataitem
+ctxt_language
+fw_context
+Language
+ctxt_ouinstance
+fw_context
+OUInstance
+ctxt_service
+fw_context
+Service
+ctxt_user
+fw_context
+User
+fbhdr
+HdrSegment
+fbhdr
+guid
+HdrSegment
+Guid
+hidden_control1
+HdrSegment
+Hidden_Control1
+hidden_control2
+HdrSegment
+Hidden_Control2
+notypeno
+HdrSegment
+NoTypeNo
+
+
+            Method Executed:JVsubanalysiscode_MET
+        Service Segments:
+
+            Segment:Account
+            Non Mandatory Segment.This segment is derived from the BO Segment
+            mlacciMLOut of the BO JOVAttNot_BO
+               Dataitems:
+               AccountCode
+               AccountDescription
+
+            Segment:AnalyisSeg
+            Non Mandatory Segment.This segment is derived from the BO Segment
+            mlacciMLOut of the BO JOVAttNot_BO
+               Dataitems:
+               Analyscode
+               Analysdesc
+
+            Segment:CostCenterSeg
+            Non Mandatory Segment.This segment is derived from the BO Segment
+            mlacciMLOut of the BO JOVAttNot_BO
+               Dataitems:
+               Costcen
+               Costcendesc
+
+            Segment:HdrSegment
+            Non Mandatory Segment.This segment is derived from the BO Segment
+            HdrSegment of the BO JVCrDnBO
+               Dataitems:
+               fbhdr
+               Guid
+               Hidden_Control1
+               Hidden_Control2
+               NoTypeNo
+
+            Segment:Subanalyscode
+            Non Mandatory Segment.This segment is derived from the BO Segment
+            mlacciMLOut of the BO JOVAttNot_BO
+               Dataitems:
+               Subanalyscode
+               Subanalysdesc
+Task:Help on Account # [JvCrDNSHlp1]
+      Implemented as Service:JvCrDNSHlp1CrDn_Ser
+
+        Process Sections:
+          Section:JvCrDNSHlp1CrDn_PS
+           An Alternative Type Process Section
+
+            Method Executed:JvCrDNSHlp1CrDn_Met
+             Method Documentation:
+            METHOD TO POPULATE THE HIDDEN OU FOR HELP SCREEN
+
+               BR Parameter Mapping:
+               
+Parameter
+Segment
+Dataitem
+CsOuInstance_Out
+JvCrDNSHlp1CrDn_SSeg
+CsOuInstance
+ouinstance_in
+Fw_context
+Ouinstance
+
+
+        Service Segments:
+
+            Segment:JvCrDNSHlp1CrDn_SSeg
+            Mandatory Segment.This segment is derived from the BO Segment
+            JvCrDNSHlp1CrDn_BoSeg of the BO JvCrDNSHlp1CrDn_BO
+               Dataitems:
+               CsOuInstance
+Task:Help on Cost Center [JvCrDNSHlp2]
+      Implemented as Service:JvCrDNSHlp2CrDn_Ser
+
+        Process Sections:
+          Section:JvCrDNSHlp2CrDn_PS
+           An Alternative Type Process Section
+
+            Method Executed:JvCrDNSHlp2CrDn_Met
+             Method Documentation:
+            METHOD TO POPULATE THE HIDDEN OU FOR HELP SCREEN
+
+               BR Parameter Mapping:
+               
+Parameter
+Segment
+Dataitem
+CsOuInstance_Out
+JvCrDNSHlp2CrDn_SSeg
+CsOuInstance
+ouinstance_in
+Fw_context
+Ouinstance
+
+
+        Service Segments:
+
+            Segment:JvCrDNSHlp2CrDn_SSeg
+            Mandatory Segment.This segment is derived from the BO Segment
+            JvCrDNSHlp2CrDn_BoSeg of the BO JvCrDNSHlp2CrDn_BO
+               Dataitems:
+               CsOuInstance
+Task:Help on Analysis Code [JvCrDNSHlp3]
+      Implemented as Service:JvCrDNSHlp3CrDn_Ser
+
+        Process Sections:
+          Section:JvCrDNSHlp3CrDn_PS
+           An Alternative Type Process Section
+
+            Method Executed:JvCrDNSHlp3CrDn_Met
+             Method Documentation:
+            METHOD TO POPULATE THE HIDDEN OU FOR HELP SCREEN
+
+               BR Parameter Mapping:
+               
+Parameter
+Segment
+Dataitem
+CsOuInstance_Out
+JvCrDNSHlp3CrDn_SSeg
+CsOuInstance
+ouinstance_in
+Fw_context
+Ouinstance
+
+
+        Service Segments:
+
+            Segment:JvCrDNSHlp3CrDn_SSeg
+            Mandatory Segment.This segment is derived from the BO Segment
+            JvCrDNSHlp3CrDn_BoSeg of the BO JvCrDNSHlp3CrDn_BO
+               Dataitems:
+               CsOuInstance
+Task:Initialize [JvCrDNSIni1]
+      Implemented as Service:JVCrDnSrIni
+
+        Process Sections:
+          Section:JVPsIni
+           An Alternative Type Process Section
+
+            Method Executed:JVAdVcMtIniCbDrCr
+             Method Documentation:
+            Documentation for the Method
+
+               BR Parameter Mapping:
+               
+Parameter
+Segment
+Dataitem
+ctxt_language
+fw_context
+Language
+ctxt_ouinstance
+fw_context
+OUInstance
+ctxt_service
+fw_context
+Service
+ctxt_user
+fw_context
+User
+DebitCredit
+CbDrCrMCSg
+DebitCredit
+
+
+            Method Executed:JVAdVcMtIniCbFb
+             Method Documentation:
+            Documentation for the Method
+
+               BR Parameter Mapping:
+               
+Parameter
+Segment
+Dataitem
+ctxt_language
+fw_context
+Language
+ctxt_ouinstance
+fw_context
+OUInstance
+ctxt_service
+fw_context
+Service
+ctxt_user
+fw_context
+User
+fbhdr
+CbFbCSg
+fbhdr
+
+
+            Method Executed:JVAdVcMtIniCbNTyp
+             Method Documentation:
+            Documentation for the Method
+
+               BR Parameter Mapping:
+               
+Parameter
+Segment
+Dataitem
+ctxt_language
+fw_context
+Language
+ctxt_ouinstance
+fw_context
+OUInstance
+ctxt_service
+fw_context
+Service
+ctxt_user
+fw_context
+User
+NoTypeNo
+CbNTypCSg
+notypeno
+
+
+            Method Executed:JVAuVcMMtIniMCbTCu
+             Method Documentation:
+            Documentation for the Method
+
+               BR Parameter Mapping:
+               
+Parameter
+Segment
+Dataitem
+ctxt_language
+fw_context
+Language
+ctxt_ouinstance
+fw_context
+OUInstance
+ctxt_service
+fw_context
+Service
+ctxt_user
+fw_context
+User
+trancurrencyml
+CbTCuMCSg
+trancurrencyml
+
+
+        Service Segments:
+
+            Segment:CbDrCrMCSg
+            Non Mandatory Segment.This segment is derived from the BO Segment
+            CbDrCrMCSg of the BO JVCrDnBO
+               Dataitems:
+               DebitCredit
+
+            Segment:CbFbCSg
+            Non Mandatory Segment.This segment is derived from the BO Segment CbFbCSg
+            of the BO JVCrDnBO
+               Dataitems:
+               fbhdr
+
+            Segment:CbNTypCSg
+            Non Mandatory Segment.This segment is derived from the BO Segment
+            CbNTypCSg of the BO JVCrDnBO
+               Dataitems:
+               notypeno
+
+            Segment:CbTCuMCSg
+            Non Mandatory Segment.This segment is derived from the BO Segment
+            CbTCuMCSg of the BO JVCrDnBO
+               Dataitems:
+               trancurrencyml
+Task:Compute Total [JvCrDNSTrn1]
+      Implemented as Service:JVCrDnSrCmp
+
+        Process Sections:
+          Section:JVPsCmp
+           An Alternative Type Process Section
+
+            Method Executed:JVCrDnMtCmpHSv
+             Method Documentation:
+            Documentation for the Method
+
+               BR Parameter Mapping:
+               
+Parameter
+Segment
+Dataitem
+creditperctotal
+HdrSegment
+CreditPerctotal
+ctxt_language
+fw_context
+Language
+ctxt_ouinstance
+fw_context
+OUInstance
+ctxt_service
+fw_context
+Service
+ctxt_user
+fw_context
+User
+debitperctotal
+HdrSegment
+DebitPerctotal
+distributionnum
+HdrSegment
+DistributionNum
+fbhdr
+HdrSegment
+fbhdr
+fpRowNo
+HdrSegment
+fpRowNo
+guid
+HdrSegment
+Guid
+hidden_control1
+HdrSegment
+Hidden_Control1
+hidden_control2
+HdrSegment
+Hidden_Control2
+notypeno
+HdrSegment
+NoTypeNo
+
+
+          Section:JVPsCmp_ML
+           An Alternative Type Process Section
+
+            Method Executed:JVCrDnMtCmpML
+             Method Documentation:
+            Documentation for the Method
+
+               BR Parameter Mapping:
+               
+Parameter
+Segment
+Dataitem
+accountcodeml
+MLMSg
+Accountcodeml
+analysiscode
+MLMSg
+analysiscode
+costcenterml
+MLMSg
+costcenterml
+creditperctotal
+HdrSegment
+CreditPerctotal
+ctxt_language
+fw_context
+Language
+ctxt_ouinstance
+fw_context
+OUInstance
+ctxt_service
+fw_context
+Service
+ctxt_user
+fw_context
+User
+debitcredit
+MLMSg
+DebitCredit
+debitperctotal
+HdrSegment
+DebitPerctotal
+distributionnum
+HdrSegment
+DistributionNum
+fbhdr
+HdrSegment
+fbhdr
+fprowno
+HdrSegment
+fpRowNo
+guid
+HdrSegment
+Guid
+hidden_control1
+HdrSegment
+Hidden_Control1
+hidden_control2
+HdrSegment
+Hidden_Control2
+modeflag
+MLMSg
+ModeFlag
+notypeno
+HdrSegment
+NoTypeNo
+percentage
+MLMSg
+percentage
+subanalysiscode
+MLMSg
+subanalysiscode
+trancurrencyml
+MLMSg
+trancurrencyml
+
+
+          Section:JVPsCmp_Ref
+           An Alternative Type Process Section
+
+            Method Executed:JVCrDnMtCmpHRef
+             Method Documentation:
+            Documentation for the Method
+
+               BR Parameter Mapping:
+               
+Parameter
+Segment
+Dataitem
+creditperctotal
+HdrSegment
+CreditPerctotal
+ctxt_language
+fw_context
+Language
+ctxt_ouinstance
+fw_context
+OUInstance
+ctxt_service
+fw_context
+Service
+ctxt_user
+fw_context
+User
+debitperctotal
+HdrSegment
+DebitPerctotal
+distributionnum
+HdrSegment
+DistributionNum
+fbhdr
+HdrSegment
+fbhdr
+guid
+HdrSegment
+Guid
+hidden_control1
+HdrSegment
+Hidden_Control1
+hidden_control2
+HdrSegment
+Hidden_Control2
+notypeno
+HdrSegment
+NoTypeNo
+
+
+            Method Executed:JVCrDnMtCmpMLOut
+             Method Documentation:
+            Documentation for the Method
+
+               BR Parameter Mapping:
+               
+Parameter
+Segment
+Dataitem
+Accountcodeml
+MLMSgO
+Accountcodeml
+Account_desc
+MLMSgO
+Accdesc
+analysiscode
+MLMSgO
+analysiscode
+costcenterml
+MLMSgO
+costcenterml
+creditperctotal
+HdrSegment
+CreditPerctotal
+ctxt_language
+fw_context
+Language
+ctxt_ouinstance
+fw_context
+OUInstance
+ctxt_service
+fw_context
+Service
+ctxt_user
+fw_context
+User
+DebitCredit
+MLMSgO
+DebitCredit
+debitperctotal
+HdrSegment
+DebitPerctotal
+distributionnum
+HdrSegment
+DistributionNum
+fbhdr
+HdrSegment
+fbhdr
+guid
+HdrSegment
+Guid
+hidden_control1
+HdrSegment
+Hidden_Control1
+hidden_control2
+HdrSegment
+Hidden_Control2
+notypeno
+HdrSegment
+NoTypeNo
+percentage
+MLMSgO
+percentage
+subanalysiscode
+MLMSgO
+subanalysiscode
+trancurrencyml
+MLMSgO
+trancurrencyml
+
+
+        Service Segments:
+
+            Segment:HdrSegment
+            Non Mandatory Segment.This segment is derived from the BO Segment
+            HdrSegment of the BO JVCrDnBO
+               Dataitems:
+               CreditPerctotal
+               DebitPerctotal
+               DistributionNum
+               fbhdr
+               fpRowNo
+               Guid
+               Hidden_Control1
+               Hidden_Control2
+               NoTypeNo
+
+            Segment:MLMSg
+            Non Mandatory Segment.This segment is derived from the BO Segment MLMSg of
+            the BO JVCrDnBO
+               Dataitems:
+               Accountcodeml
+               analysiscode
+               costcenterml
+               DebitCredit
+               ModeFlag
+               percentage
+               subanalysiscode
+               trancurrencyml
+
+            Segment:MLMSgO
+            Non Mandatory Segment.This segment is derived from the BO Segment MLMSg of
+            the BO JVCrDnBO
+               Dataitems:
+               Accdesc
+               Accountcodeml
+               analysiscode
+               costcenterml
+               DebitCredit
+               percentage
+               subanalysiscode
+               trancurrencyml
+Task:Create Distribution Setup [JvCrDNSTrn2]
+      Implemented as Service:JVCrDnSrCrDn
+
+        Process Sections:
+          Section:JVPsCrDn
+           An Alternative Type Process Section
+
+            Method Executed:JVCrDnMtCrDnHSv
+             Method Documentation:
+            Documentation for the Method
+
+               BR Parameter Mapping:
+               
+Parameter
+Segment
+Dataitem
+createddate
+HdrSegment
+Createddate
+creationby
+HdrSegment
+Creationby
+creditperctotal
+HdrSegment
+CreditPerctotal
+ctxt_language
+fw_context
+Language
+ctxt_ouinstance
+fw_context
+OUInstance
+ctxt_service
+fw_context
+Service
+ctxt_user
+fw_context
+User
+debitperctotal
+HdrSegment
+DebitPerctotal
+distdesc
+HdrSegment
+DistDesc
+distributionnum
+HdrSegment
+DistributionNum
+fbhdr
+HdrSegment
+fbhdr
+fpRowNo
+HdrSegment
+fpRowNo
+guid
+HdrSegment
+Guid
+hidden_control1
+HdrSegment
+Hidden_Control1
+hidden_control2
+HdrSegment
+Hidden_Control2
+notypeno
+HdrSegment
+NoTypeNo
+status
+HdrSegment
+Status
+
+
+          Section:JVPsCrDn_ML
+           An Alternative Type Process Section
+
+            Method Executed:JVCrDnMtCrDnML
+             Method Documentation:
+            Documentation for the Method
+
+               BR Parameter Mapping:
+               
+Parameter
+Segment
+Dataitem
+accountcodeml
+MLMSg
+Accountcodeml
+analysiscode
+MLMSg
+analysiscode
+costcenterml
+MLMSg
+costcenterml
+createddate
+HdrSegment
+Createddate
+creationby
+HdrSegment
+Creationby
+creditperctotal
+HdrSegment
+CreditPerctotal
+ctxt_language
+fw_context
+Language
+ctxt_ouinstance
+fw_context
+OUInstance
+ctxt_service
+fw_context
+Service
+ctxt_user
+fw_context
+User
+debitcredit
+MLMSg
+DebitCredit
+debitperctotal
+HdrSegment
+DebitPerctotal
+distdesc
+HdrSegment
+DistDesc
+distributionnum
+HdrSegment
+DistributionNum
+fbhdr
+HdrSegment
+fbhdr
+fprowno
+HdrSegment
+fpRowNo
+guid
+HdrSegment
+Guid
+hidden_control1
+HdrSegment
+Hidden_Control1
+hidden_control2
+HdrSegment
+Hidden_Control2
+modeflag
+MLMSg
+ModeFlag
+notypeno
+HdrSegment
+NoTypeNo
+percentage
+MLMSg
+percentage
+status
+HdrSegment
+Status
+subanalysiscode
+MLMSg
+subanalysiscode
+trancurrencyml
+MLMSg
+trancurrencyml
+
+
+          Section:JVPsCrDn_Ref
+           An Alternative Type Process Section
+
+            Method Executed:JVCrDnMtCrDnHRef
+             Method Documentation:
+            Documentation for the Method
+
+               BR Parameter Mapping:
+               
+Parameter
+Segment
+Dataitem
+createddate
+HdrSegment
+Createddate
+creationby
+HdrSegment
+Creationby
+creditperctotal
+HdrSegment
+CreditPerctotal
+ctxt_language
+fw_context
+Language
+ctxt_ouinstance
+fw_context
+OUInstance
+ctxt_service
+fw_context
+Service
+ctxt_user
+fw_context
+User
+debitperctotal
+HdrSegment
+DebitPerctotal
+distdesc
+HdrSegment
+DistDesc
+distributionnum
+HdrSegment
+DistributionNum
+fbhdr
+HdrSegment
+fbhdr
+guid
+HdrSegment
+Guid
+hidden_control1
+HdrSegment
+Hidden_Control1
+hidden_control2
+HdrSegment
+Hidden_Control2
+notypeno
+HdrSegment
+NoTypeNo
+status
+HdrSegment
+Status
+
+
+            Method Executed:JVCrDnMtCrDnMLOut
+             Method Documentation:
+            Documentation for the Method
+
+               BR Parameter Mapping:
+               
+Parameter
+Segment
+Dataitem
+Accountcodeml
+MLMSgO
+Accountcodeml
+Account_desc
+MLMSgO
+AccDesc
+analysiscode
+MLMSgO
+analysiscode
+costcenterml
+MLMSgO
+costcenterml
+createddate
+HdrSegment
+Createddate
+creationby
+HdrSegment
+Creationby
+creditperctotal
+HdrSegment
+CreditPerctotal
+ctxt_language
+fw_context
+Language
+ctxt_ouinstance
+fw_context
+OUInstance
+ctxt_service
+fw_context
+Service
+ctxt_user
+fw_context
+User
+DebitCredit
+MLMSgO
+DebitCredit
+debitperctotal
+HdrSegment
+DebitPerctotal
+distdesc
+HdrSegment
+DistDesc
+distributionnum
+HdrSegment
+DistributionNum
+fbhdr
+HdrSegment
+fbhdr
+guid
+HdrSegment
+Guid
+hidden_control1
+HdrSegment
+Hidden_Control1
+hidden_control2
+HdrSegment
+Hidden_Control2
+notypeno
+HdrSegment
+NoTypeNo
+percentage
+MLMSgO
+percentage
+status
+HdrSegment
+Status
+subanalysiscode
+MLMSgO
+subanalysiscode
+trancurrencyml
+MLMSgO
+trancurrencyml
+
+
+        Service Segments:
+
+            Segment:HdrSegment
+            Non Mandatory Segment.This segment is derived from the BO Segment
+            HdrSegment of the BO JVCrDnBO
+               Dataitems:
+               Createddate
+               Creationby
+               CreditPerctotal
+               DebitPerctotal
+               DistDesc
+               DistributionNum
+               fbhdr
+               fpRowNo
+               Guid
+               Hidden_Control1
+               Hidden_Control2
+               NoTypeNo
+               Status
+
+            Segment:MLMSg
+            Non Mandatory Segment.This segment is derived from the BO Segment MLMSg of
+            the BO JVCrDnBO
+               Dataitems:
+               Accountcodeml
+               analysiscode
+               costcenterml
+               DebitCredit
+               ModeFlag
+               percentage
+               subanalysiscode
+               trancurrencyml
+
+            Segment:MLMSgO
+            Non Mandatory Segment.This segment is derived from the BO Segment MLMSg of
+            the BO JVCrDnBO
+               Dataitems:
+               AccDesc
+               Accountcodeml
+               analysiscode
+               costcenterml
+               DebitCredit
+               percentage
+               subanalysiscode
+               trancurrencyml
+Task:Account code on enter [JvCrDNSUI1]
+      Implemented as Service:JVCrDnSrUAc
+
+        Process Sections:
+          Section:JVPsUAc_ML
+           An Alternative Type Process Section
+
+            Method Executed:JVCrDnMtUAcUMML
+             Method Documentation:
+            Documentation for the Method
+
+               BR Parameter Mapping:
+               
+Parameter
+Segment
+Dataitem
+accountcodeml
+MLUiMSg
+Accountcodeml
+Account_desc
+MLUiMSg
+Accdesc
+analysiscode
+MLUiMSg
+analysiscode
+costcenterml
+MLUiMSg
+costcenterml
+ctxt_language
+fw_context
+Language
+ctxt_ouinstance
+fw_context
+OUInstance
+ctxt_service
+fw_context
+Service
+ctxt_user
+fw_context
+User
+debitcredit
+MLUiMSg
+DebitCredit
+distributionnum
+HdrSegment
+DistributionNum
+fbhdr
+HdrSegment
+fbhdr
+fprowno
+HdrSegment
+fpRowNo
+guid
+HdrSegment
+Guid
+modeflag
+MLUiMSg
+ModeFlag
+percentage
+MLUiMSg
+percentage
+subanalysiscode
+MLUiMSg
+subanalysiscode
+trancurrencyml
+MLUiMSg
+trancurrencyml
+
+
+        Service Segments:
+
+            Segment:HdrSegment
+            Non Mandatory Segment.This segment is derived from the BO Segment
+            HdrSegment of the BO JVCrDnBO
+               Dataitems:
+               DistributionNum
+               fbhdr
+               fpRowNo
+               Guid
+
+            Segment:MLUiMSg
+            Non Mandatory Segment.This segment is derived from the BO Segment MLMSg of
+            the BO JVCrDnBO
+               Dataitems:
+               Accdesc
+               Accountcodeml
+               analysiscode
+               costcenterml
+               DebitCredit
+               ModeFlag
+               percentage
+               subanalysiscode
+               trancurrencyml
+Task:Transaction currency on enter [JvCrDNSUI2]
+      Implemented as Service:JVCrDnSrUCu
+
+        Process Sections:
+          Section:JVPsUCu_ML
+           An Alternative Type Process Section
+
+            Method Executed:JVCrDnMtUCuUMML
+             Method Documentation:
+            Documentation for the Method
+
+               BR Parameter Mapping:
+               
+Parameter
+Segment
+Dataitem
+accountcodeml
+MLUiMSg
+Accountcodeml
+Account_desc
+MLUiMSg
+Accdesc
+analysiscode
+MLUiMSg
+analysiscode
+costcenterml
+MLUiMSg
+costcenterml
+ctxt_language
+fw_context
+Language
+ctxt_ouinstance
+fw_context
+OUInstance
+ctxt_service
+fw_context
+Service
+ctxt_user
+fw_context
+User
+debitcredit
+MLUiMSg
+DebitCredit
+distributionnum
+HdrSegment
+DistributionNum
+fbhdr
+HdrSegment
+fbhdr
+fprowno
+HdrSegment
+fpRowNo
+guid
+HdrSegment
+Guid
+hidden_control1
+HdrSegment
+Hidden_Control1
+hidden_control2
+HdrSegment
+Hidden_Control2
+modeflag
+MLUiMSg
+ModeFlag
+percentage
+MLUiMSg
+percentage
+subanalysiscode
+MLUiMSg
+subanalysiscode
+trancurrencyml
+MLUiMSg
+trancurrencyml
+
+
+        Service Segments:
+
+            Segment:HdrSegment
+            Non Mandatory Segment.This segment is derived from the BO Segment
+            HdrSegment of the BO JVCrDnBO
+               Dataitems:
+               DistributionNum
+               fbhdr
+               fpRowNo
+               Guid
+               Hidden_Control1
+               Hidden_Control2
+
+            Segment:MLUiMSg
+            Non Mandatory Segment.This segment is derived from the BO Segment MLMSg of
+            the BO JVCrDnBO
+               Dataitems:
+               Accdesc
+               Accountcodeml
+               analysiscode
+               costcenterml
+               DebitCredit
+               ModeFlag
+               percentage
+               subanalysiscode
+               trancurrencyml 
+
+		
+
+
+
+		                   Page 1 of 1
+
+		
+
+
+	    Page 1 of 2
+

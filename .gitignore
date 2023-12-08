@@ -1,0 +1,22 @@
+# .gitignore for Python projects
+
+# Python bytecode
+__pycache__/
+
+# Compiled Python files
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+myenv/
+
+# IDE-specific files
+.vscode/
+.idea/
+
+# Other temporary files
+*.pyc
+*.pyo
+*~
